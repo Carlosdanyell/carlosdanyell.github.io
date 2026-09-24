@@ -1,4 +1,3 @@
-import { m } from 'motion/react'
 import { BrowserFrame, PhoneFrame } from '@/components/ui/DeviceFrames'
 import { ResponsiveImage } from '@/components/ui/ResponsiveImage'
 import type { Shot } from '@/data/projects'
@@ -85,6 +84,10 @@ export function BrowserVisual({ shots, alts, url }: VisualProps & { url: string 
 /**
  * Ilustração abstrata da conciliação: duas colunas de registros (razão e ERP)
  * ligadas por linhas de correspondência. Sem números nem dados.
+ *
+ * É um desenho estático, de propósito: linhas tracejadas animadas (stroke-dasharray com
+ * pathLength) e opacidade por elemento corrompiam a renderização em GPUs de celulares
+ * Android. A entrada do card já vem do Reveal que o envolve.
  */
 export function ReconciliationIllustration({ label }: { label: string }) {
   const rows = [0, 1, 2, 3, 4, 5]
@@ -106,7 +109,7 @@ export function ReconciliationIllustration({ label }: { label: string }) {
       {[20, 270].map((x) => (
         <g key={x}>
           <rect x={x} y="14" width="130" height="206" rx="12" fill="var(--surface-2)" stroke="var(--border)" />
-          <rect x={x + 14} y="24" width="46" height="5" rx="2.5" fill="var(--muted)" opacity="0.5" />
+          <rect x={x + 14} y="24" width="46" height="5" rx="2.5" fill="var(--muted)" fillOpacity="0.5" />
         </g>
       ))}
       {rows.map((i) => (
@@ -116,33 +119,20 @@ export function ReconciliationIllustration({ label }: { label: string }) {
         </g>
       ))}
       {/* Linhas de correspondência */}
-      {links.map(([a, b], k) => (
-        <m.path
+      {links.map(([a, b]) => (
+        <path
           key={`${a}-${b}`}
           d={`M150 ${y(a) + 4} C 210 ${y(a) + 4}, 210 ${y(b) + 4}, 270 ${y(b) + 4}`}
           fill="none"
           stroke="var(--primary)"
+          strokeOpacity="0.85"
           strokeWidth="1.5"
           strokeLinecap="round"
-          initial={{ pathLength: 0, opacity: 0 }}
-          whileInView={{ pathLength: 1, opacity: 0.85 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6, delay: 0.15 + k * 0.08, ease: [0.22, 1, 0.36, 1] }}
         />
       ))}
       {/* Marcadores de conciliado e uma pendência */}
-      {links.map(([a], k) => (
-        <m.circle
-          key={`ok-${a}`}
-          cx="150"
-          cy={y(a) + 4}
-          r="3.5"
-          fill="var(--primary)"
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.3, delay: 0.5 + k * 0.08 }}
-        />
+      {links.map(([a]) => (
+        <circle key={`ok-${a}`} cx="150" cy={y(a) + 4} r="3.5" fill="var(--primary)" />
       ))}
       <circle cx="150" cy={y(4) + 4} r="3.5" fill="none" stroke="var(--accent)" strokeWidth="1.5" />
       <circle cx="270" cy={y(4) + 4} r="3.5" fill="none" stroke="var(--accent)" strokeWidth="1.5" />
