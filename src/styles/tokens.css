@@ -20,6 +20,9 @@
   --grid-line: rgba(15, 23, 42, 0.055);
   --grid-line-strong: rgba(30, 100, 149, 0.3);
   --glow: rgba(30, 100, 149, 0.1);
+  --card-glow: rgba(30, 100, 149, 0.14);
+  --spotlight: rgba(30, 100, 149, 0.09);
+  --grid-line-soft: rgba(15, 23, 42, 0.033);
   --nav-bg: rgba(247, 248, 250, 0.7);
   --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 24px 48px -28px rgba(15, 23, 42, 0.22);
   --device: #10151f;
@@ -41,6 +44,9 @@
   --grid-line: rgba(139, 149, 167, 0.07);
   --grid-line-strong: rgba(76, 141, 255, 0.28);
   --glow: rgba(76, 141, 255, 0.16);
+  --card-glow: rgba(76, 141, 255, 0.14);
+  --spotlight: rgba(76, 141, 255, 0.09);
+  --grid-line-soft: rgba(139, 149, 167, 0.042);
   --nav-bg: rgba(10, 15, 26, 0.62);
   --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 24px 48px -24px rgba(0, 0, 0, 0.6);
   --device: #1b2231;

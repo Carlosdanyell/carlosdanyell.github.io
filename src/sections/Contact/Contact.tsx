@@ -24,8 +24,7 @@ export function Contact() {
             aria-hidden="true"
             className="pointer-events-none absolute inset-0"
             style={{
-              background:
-                'radial-gradient(60% 80% at 100% 0%, color-mix(in oklab, var(--primary) 12%, transparent), transparent 70%)',
+              background: 'radial-gradient(60% 80% at 100% 0%, var(--card-glow), transparent 70%)',
             }}
           />
           <div className="relative grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:gap-16">

@@ -23,30 +23,16 @@ export function ProjectCard({ project, layout, onOpen }: Props) {
   const visual = (
     <div
       className={
-        'relative overflow-hidden rounded-[1rem] border border-border/70 ' +
+        'card-visual relative overflow-hidden rounded-[1rem] border border-border/70 ' +
         (layout === 'featured'
           ? 'min-h-[27rem] py-10 md:min-h-[32rem]'
           : layout === 'wide'
             ? 'flex h-60 items-center justify-center p-6 md:h-full md:min-h-64'
             : 'h-72 sm:h-80')
       }
-      style={{
-        background:
-          'radial-gradient(120% 90% at 50% 0%, color-mix(in oklab, var(--primary) 14%, transparent), transparent 60%), var(--surface-2)',
-      }}
       data-cursor="hover"
       onClick={(e) => onOpen(project, e.currentTarget)}
     >
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 opacity-60"
-        style={{
-          backgroundImage:
-            'linear-gradient(to right, var(--grid-line) 1px, transparent 1px), linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px)',
-          backgroundSize: '32px 32px',
-          maskImage: 'radial-gradient(ellipse at 50% 40%, #000 30%, transparent 75%)',
-        }}
-      />
       {project.visual === 'phone-carousel' ? (
         <PhoneCarousel shots={project.shots} alts={text.shots} className="relative" />
       ) : project.visual === 'phone-fan' ? (

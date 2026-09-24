@@ -105,7 +105,28 @@
     border-radius: 1.25rem;
   }
 
-  /* Brilho que acompanha o ponteiro dentro do card (--px / --py em %). */
+  /*
+   * Fundo dos visuais dos cards de projeto: brilho no topo, grade que esmaece nas bordas
+   * e cor de base, tudo em camadas de background. Sem mask-image, sem camada com opacidade
+   * e sem color-mix: essa combinação corrompia a renderização em GPUs de celulares Android.
+   */
+  .card-visual {
+    background-color: var(--surface-2);
+    background-image:
+      radial-gradient(120% 90% at 50% 0%, var(--card-glow), transparent 60%),
+      radial-gradient(ellipse at 50% 40%, transparent 30%, var(--surface-2) 75%),
+      linear-gradient(to right, var(--grid-line-soft) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line-soft) 1px, transparent 1px);
+    background-size:
+      auto,
+      auto,
+      32px 32px,
+      32px 32px;
+  }
+}
+
+/* Brilho que acompanha o ponteiro dentro do card (--px / --py em %). Só com mouse. */
+@media (hover: hover) and (pointer: fine) {
   .card-spotlight::before {
     content: '';
     position: absolute;
@@ -114,16 +135,14 @@
     pointer-events: none;
     opacity: 0;
     transition: opacity 300ms var(--ease-out-soft);
-    background: radial-gradient(
-      420px circle at var(--px, 50%) var(--py, 50%),
-      color-mix(in oklab, var(--primary) 9%, transparent),
-      transparent 60%
-    );
+    background: radial-gradient(420px circle at var(--px, 50%) var(--py, 50%), var(--spotlight), transparent 60%);
   }
   .card-spotlight:hover::before {
     opacity: 1;
   }
+}
 
+@layer components {
   .sr-only-focusable:not(:focus):not(:focus-within) {
     position: absolute;
     width: 1px;
