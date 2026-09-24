@@ -268,9 +268,6 @@ export const pt = {
     location: 'Localização',
     locationValue: 'Cornélio Procópio – PR',
   },
-  footer: {
-    built: 'Feito com React, TypeScript e Motion.',
-  },
 }
 
 export type Dict = typeof pt

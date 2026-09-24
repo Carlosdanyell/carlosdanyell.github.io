@@ -7,16 +7,13 @@ export function Footer() {
   return (
     <footer className="border-t border-border">
       <div className="container-page flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
-        <div className="space-y-1">
-          <p className="text-sm text-text">
-            ©{' '}
-            <span className="tabular" suppressHydrationWarning>
-              {new Date().getFullYear()}
-            </span>{' '}
-            Carlos Danyell da Silva
-          </p>
-          <p className="font-mono text-xs text-muted">{t.footer.built}</p>
-        </div>
+        <p className="text-sm text-text">
+          ©{' '}
+          <span className="tabular" suppressHydrationWarning>
+            {new Date().getFullYear()}
+          </span>{' '}
+          Carlos Danyell da Silva
+        </p>
         <button
           type="button"
           onClick={() => {

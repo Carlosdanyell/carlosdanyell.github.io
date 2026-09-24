@@ -74,9 +74,13 @@ export function Navbar() {
           className="group flex items-center gap-3 rounded-lg"
           aria-label={t.a11y.home}
         >
-          <span className="flex size-9 items-center justify-center rounded-[0.7rem] border border-border-strong bg-surface font-display text-[0.8rem] font-semibold tracking-tight text-text transition-colors group-hover:border-primary/60">
-            CD
-          </span>
+          <img
+            src="/favicon.svg"
+            alt=""
+            width={36}
+            height={36}
+            className="size-9 rounded-[0.55rem] transition-transform duration-300 ease-(--ease-out-soft) group-hover:-rotate-6"
+          />
           <span className="hidden text-sm font-medium text-text sm:block">Carlos Danyell</span>
         </a>
 

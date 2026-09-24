@@ -268,7 +268,4 @@ export const en: Dict = {
     location: 'Location',
     locationValue: 'Cornélio Procópio, Paraná, Brazil',
   },
-  footer: {
-    built: 'Built with React, TypeScript and Motion.',
-  },
 }
