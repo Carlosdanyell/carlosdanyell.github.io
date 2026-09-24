@@ -3,6 +3,7 @@ import { CopyEmail } from '@/components/ui/CopyEmail'
 import { ArrowUpRight, GitHub, LinkedIn, Mail, MapPin } from '@/components/ui/icons'
 import { profile } from '@/data/profile'
 import { useI18n } from '@/i18n/context'
+import { trackSpotlight } from '@/lib/spotlight'
 import { SECTION_IDS } from '@/sections/ids'
 
 export function Contact() {
@@ -13,13 +14,12 @@ export function Contact() {
   ]
 
   return (
-    <section
-      id={SECTION_IDS.contact}
-      aria-labelledby="contact-title"
-      className="relative overflow-hidden py-20 md:py-28"
-    >
+    <section id={SECTION_IDS.contact} aria-labelledby="contact-title" className="section-shell">
       <div className="container-page">
-        <Reveal className="card relative overflow-hidden p-6 shadow-(--shadow-card) sm:p-10 lg:p-14">
+        <Reveal
+          className="card card-spotlight contact-panel relative overflow-hidden p-6 sm:p-10 lg:p-14"
+          onPointerMove={trackSpotlight}
+        >
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0"
@@ -62,7 +62,7 @@ export function Contact() {
               </div>
             </div>
 
-            <ul className="flex flex-col justify-end divide-y divide-border/80 border-y border-border/80 self-end">
+            <ul className="contact-links flex flex-col justify-end divide-y divide-border/80 border-y border-border/80 self-end">
               {links.map((link) => (
                 <li key={link.label}>
                   <a

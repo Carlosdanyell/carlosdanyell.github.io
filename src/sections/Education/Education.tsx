@@ -11,13 +11,13 @@ export function Education() {
   const e = t.education
 
   return (
-    <section id={SECTION_IDS.education} aria-labelledby="education-title" className="relative py-20 md:py-28">
+    <section id={SECTION_IDS.education} aria-labelledby="education-title" className="section-shell education-section">
       <div className="container-page">
         <SectionHeading id="education-title" index="05" label={t.nav.education} title={e.title} />
 
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
           <Reveal className="lg:col-span-7">
-            <div className="card h-full p-6 md:p-8">
+            <div className="card education-panel h-full p-6 md:p-8">
               <h3 className="label-mono flex items-center gap-2.5">
                 <Cap size={18} className="text-primary" />
                 {e.degreesTitle}
@@ -54,7 +54,7 @@ export function Education() {
 
           <div className="grid grid-cols-1 gap-5 lg:col-span-5">
             <Reveal delay={0.05}>
-              <div className="card p-6 md:p-8">
+              <div className="card education-panel p-6 md:p-8">
                 <h3 className="label-mono flex items-center gap-2.5">
                   <Badge size={18} className="text-primary" />
                   {e.certsTitle}
@@ -78,16 +78,16 @@ export function Education() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="card p-6 md:p-8">
+              <div className="card education-panel p-6 md:p-8">
                 <h3 className="label-mono flex items-center gap-2.5">
                   <Globe size={18} className="text-primary" />
                   {e.languagesTitle}
                 </h3>
                 <dl className="mt-4 divide-y divide-border/70">
                   {e.languages.map((l) => (
-                    <div key={l.name} className="flex items-baseline justify-between gap-4 py-3">
+                    <div key={l.name} className="flex items-baseline justify-between gap-3 py-3">
                       <dt className="text-text">{l.name}</dt>
-                      <dd className="font-mono text-xs text-muted">{l.level}</dd>
+                      <dd className="text-right font-mono text-xs text-muted">{l.level}</dd>
                     </div>
                   ))}
                 </dl>

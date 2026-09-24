@@ -1,21 +1,47 @@
-import { m, type HTMLMotionProps } from 'motion/react'
+import { useEffect, useRef, type CSSProperties, type HTMLAttributes } from 'react'
+import { usePrefersReducedMotion } from '@/hooks/useMediaQuery'
 
-interface RevealProps extends HTMLMotionProps<'div'> {
+interface RevealProps extends HTMLAttributes<HTMLDivElement> {
   delay?: number
   y?: number
 }
 
-/** Entrada curta ao rolar: opacidade + leve deslocamento, uma vez só. */
-export function Reveal({ delay = 0, y = 16, children, ...props }: RevealProps) {
+/** O HTML já nasce visível; somente elementos abaixo da dobra recebem a entrada. */
+export function Reveal({ delay = 0, y = 18, children, className = '', style, ...props }: RevealProps) {
+  const ref = useRef<HTMLDivElement>(null)
+  const reduced = usePrefersReducedMotion()
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    if (reduced || !('IntersectionObserver' in window)) {
+      el.dataset.revealed = 'true'
+      return
+    }
+    if (el.getBoundingClientRect().top < window.innerHeight * 0.94) {
+      el.dataset.revealed = 'true'
+      return
+    }
+    el.dataset.revealed = 'false'
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          el.dataset.revealed = 'true'
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '0px 0px -4% 0px', threshold: 0 },
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [reduced])
   return (
-    <m.div
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15, margin: '0px 0px -8% 0px' }}
-      transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
+    <div
+      ref={ref}
+      className={'reveal ' + className}
+      style={{ '--reveal-delay': delay + 's', '--reveal-y': y + 'px', ...style } as CSSProperties}
       {...props}
     >
       {children}
-    </m.div>
+    </div>
   )
 }

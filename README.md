@@ -10,8 +10,10 @@ O site apresenta trajetória, projetos, competências, formação e contato, em 
 
 - [Vite](https://vite.dev) + [React](https://react.dev) + TypeScript
 - [Tailwind CSS 4](https://tailwindcss.com), com tokens de design em variáveis CSS (`src/styles/tokens.css`)
-- [Motion](https://motion.dev) para animações e [Lenis](https://lenis.darkroom.engineering) para rolagem suave
-  (ambos respeitam `prefers-reduced-motion`)
+- [Motion](https://motion.dev) para galeria, carrossel, inclinação dos cards e indicadores; CSS + IntersectionObserver
+  para as entradas de seção
+- [Lenis](https://lenis.darkroom.engineering) para rolagem suave, só em desktop com mouse (no toque fica a rolagem
+  nativa); tudo respeita `prefers-reduced-motion`
 - Fontes auto-hospedadas: Sora (`@fontsource-variable/sora`), Geist e Geist Mono (pacote `geist`, recortadas para o
   latim com [subset-font](https://github.com/papandreou/subset-font))
 - Pré-renderização no build com `react-dom/static`: o HTML já chega com todo o conteúdo e o React só hidrata
@@ -47,8 +49,8 @@ src/
   data/                    Dados sem texto: projetos, experiência, formação, contato
   components/              Layout (menu, rodapé), UI (botões, molduras, contador) e animações
   sections/                Uma pasta por seção: Hero, About, Experience, Projects, Skills, Education, Contact
-  hooks/ lib/              Tema, rolagem, seção ativa, inclinação 3D, preferências de movimento
-  styles/                  Tailwind, tokens de cor dos dois temas e fontes
+  hooks/ lib/              Tema, rolagem, seção ativa, inclinação 3D, brilho dos cards e preferências de movimento
+  styles/                  Tailwind, tokens de cor, composição editorial mobile first e fontes
 ```
 
 ## Como adicionar um novo projeto
@@ -120,8 +122,14 @@ e publica `dist/` no GitHub Pages (Settings → Pages → Source: **GitHub Actio
 
 - HTML semântico, navegação por teclado com foco visível, link para pular ao conteúdo e textos alternativos
 - Contraste AA nos dois temas; o vermelho de detalhe nunca é usado como cor de texto
-- `prefers-reduced-motion` desliga o Lenis, a inclinação 3D, o cursor, a troca automática de telas e as animações
+- `prefers-reduced-motion` desliga o Lenis, a inclinação 3D, o cursor, a grade interativa, as entradas, a troca
+  automática de telas e os indicadores animados
 - Imagens WebP responsivas com `srcset`, carregamento sob demanda e placeholder desfocado
 - HTML pré-renderizado: o conteúdo aparece antes do JavaScript; as entradas do hero são animações CSS
 - A grade de projetos, o modal de detalhes e o Lenis ficam em chunks separados; o Lenis só carrega em desktop com mouse
+- Hero de 88svh no celular, timeline vertical, competências em quatro grupos e projetos em bento no desktop
+- Capturas com controles de 44px; a troca automática pausa com o mouse em cima, com o foco e pelo botão
+- Efeitos que seguem o mouse (grade do hero, brilho e inclinação dos cards) só existem com ponteiro fino; máscaras CSS
+  ficam fora do celular, onde já corromperam a pintura em GPUs Android
+- Entradas progressivas com HTML visível antes da hidratação e também sem JavaScript
 - Fontes latinas recortadas e pré-carregadas (Sora e Geist)

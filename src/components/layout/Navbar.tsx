@@ -1,8 +1,9 @@
-import { AnimatePresence, m } from 'motion/react'
+import { AnimatePresence, m, useScroll } from 'motion/react'
 import { useEffect, useLayoutEffect, useRef, useState, type MouseEvent } from 'react'
 import { IconButton } from '@/components/ui/Button'
 import { Close, Menu, Moon, Sun } from '@/components/ui/icons'
 import { useActiveSection } from '@/hooks/useActiveSection'
+import { usePrefersReducedMotion } from '@/hooks/useMediaQuery'
 import { useTheme } from '@/hooks/useTheme'
 import { useI18n } from '@/i18n/context'
 import { scrollToSection, scrollToTop } from '@/lib/scroll'
@@ -10,6 +11,7 @@ import { SECTION_IDS, SECTION_LIST, type SectionKey } from '@/sections/ids'
 
 export function Navbar() {
   const { t } = useI18n()
+  const reduced = usePrefersReducedMotion()
   const active = useActiveSection(SECTION_LIST)
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
@@ -51,7 +53,7 @@ export function Navbar() {
   return (
     <header
       className={
-        'fixed inset-x-0 top-0 z-50 border-b transition-[border-color,background-color] duration-300 ' +
+        'fixed inset-x-0 top-0 z-50 border-b bg-bg/95 transition-[border-color,background-color] duration-300 ' +
         (scrolled || open ? 'border-border/80' : 'border-transparent')
       }
     >
@@ -71,7 +73,7 @@ export function Navbar() {
             setOpen(false)
             scrollToTop()
           }}
-          className="group flex items-center gap-3 rounded-lg"
+          className="navbar-brand group flex items-center gap-3 rounded-lg"
           aria-label={t.a11y.home}
         >
           <img
@@ -92,7 +94,7 @@ export function Navbar() {
           <button
             ref={menuButton}
             type="button"
-            className="inline-flex size-10 items-center justify-center rounded-full text-text transition-colors hover:bg-surface lg:hidden"
+            className="inline-flex size-11 items-center justify-center rounded-full text-text transition-colors hover:bg-surface lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? t.a11y.closeMenu : t.a11y.openMenu}
@@ -111,8 +113,8 @@ export function Navbar() {
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-            className="border-t border-border/80 lg:hidden"
+            transition={{ duration: reduced ? 0 : 0.22, ease: [0.22, 1, 0.36, 1] }}
+            className="mobile-nav-panel border-t border-border/80 lg:hidden"
           >
             <ul className="container-page flex flex-col py-3">
               {keys.map((key, i) => {
@@ -139,6 +141,7 @@ export function Navbar() {
           </m.div>
         ) : null}
       </AnimatePresence>
+      <ReadingProgress />
     </header>
   )
 }
@@ -209,6 +212,7 @@ function DesktopLinks({
 function ThemeToggle() {
   const { t } = useI18n()
   const { theme, toggle } = useTheme()
+  const reduced = usePrefersReducedMotion()
   const toLight = theme === 'dark'
   return (
     <IconButton label={toLight ? t.a11y.toLight : t.a11y.toDark} onClick={toggle}>
@@ -218,7 +222,7 @@ function ThemeToggle() {
           initial={{ rotate: -45, opacity: 0, scale: 0.7 }}
           animate={{ rotate: 0, opacity: 1, scale: 1 }}
           exit={{ rotate: 45, opacity: 0, scale: 0.7 }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: reduced ? 0 : 0.2 }}
           className="inline-flex"
         >
           {toLight ? <Sun size={18} /> : <Moon size={18} />}
@@ -236,7 +240,7 @@ function LanguageSwitch() {
       onClick={toggleLang}
       aria-label={t.a11y.switchLang}
       title={t.a11y.switchLang}
-      className="inline-flex h-10 items-center gap-1 rounded-full px-3 font-mono text-xs tracking-wider transition-colors hover:bg-surface"
+      className="inline-flex h-11 items-center gap-1 rounded-full px-3 font-mono text-xs tracking-wider transition-colors hover:bg-surface"
     >
       <span lang="pt-BR" className={lang === 'pt' ? 'text-text' : 'text-muted'}>
         PT
@@ -249,4 +253,10 @@ function LanguageSwitch() {
       </span>
     </button>
   )
+}
+
+function ReadingProgress() {
+  const { scrollYProgress } = useScroll()
+  const reduced = usePrefersReducedMotion()
+  return reduced ? null : <m.span aria-hidden="true" className="reading-progress" style={{ scaleX: scrollYProgress }} />
 }

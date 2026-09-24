@@ -27,6 +27,14 @@
   --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 24px 48px -28px rgba(15, 23, 42, 0.22);
   --device: #10151f;
   --device-edge: #2a3240;
+  --primary-subtle: #eaf0f5;
+  --surface-elevated: #ffffff;
+  --overlay: rgba(5, 8, 14, 0.72);
+  --device-screen: #000000;
+  --device-shadow: rgba(0, 0, 0, 0.55);
+  --device-highlight: rgba(255, 255, 255, 0.06);
+  --radius-card: 1rem;
+  --page-gutter: 1.25rem;
 }
 
 [data-theme='dark'] {
@@ -51,4 +59,6 @@
   --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 24px 48px -24px rgba(0, 0, 0, 0.6);
   --device: #1b2231;
   --device-edge: #2c3647;
+  --primary-subtle: #14233c;
+  --surface-elevated: #172132;
 }

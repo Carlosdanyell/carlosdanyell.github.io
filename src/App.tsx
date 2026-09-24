@@ -16,6 +16,7 @@ import { Projects } from '@/sections/Projects/Projects'
 import { Skills } from '@/sections/Skills/Skills'
 
 export default function App() {
+  // Rolagem suave só em desktop com mouse; no toque o navegador já faz melhor.
   useLenis()
 
   // Link direto para uma seção (#projetos etc.): a grade de projetos carrega depois,

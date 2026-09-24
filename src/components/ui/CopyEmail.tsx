@@ -1,5 +1,6 @@
 import { AnimatePresence, m } from 'motion/react'
 import { useEffect, useRef, useState } from 'react'
+import { usePrefersReducedMotion } from '@/hooks/useMediaQuery'
 import { useI18n } from '@/i18n/context'
 import { Check, Copy } from './icons'
 
@@ -25,6 +26,7 @@ async function copyText(text: string) {
 
 export function CopyEmail({ email }: { email: string }) {
   const { t } = useI18n()
+  const reduced = usePrefersReducedMotion()
   const [state, setState] = useState<State>('idle')
   const timer = useRef<number | undefined>(undefined)
 
@@ -49,7 +51,7 @@ export function CopyEmail({ email }: { email: string }) {
         type="button"
         onClick={handleCopy}
         className={
-          'group inline-flex h-11 items-center gap-2 rounded-full border px-4 text-sm font-medium transition-[border-color,background-color,color,transform] duration-200 active:scale-[0.97] ' +
+          'group inline-flex h-11 items-center gap-2 rounded-xl border px-4 text-sm font-medium transition-[border-color,background-color,color,transform] duration-200 active:scale-[0.97] ' +
           (copied
             ? 'border-primary/60 bg-primary/10 text-text'
             : 'border-border-strong bg-surface/60 text-text hover:-translate-y-px hover:border-primary/60')
@@ -63,7 +65,7 @@ export function CopyEmail({ email }: { email: string }) {
                 initial={{ scale: 0.4, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.4, opacity: 0 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: reduced ? 0 : 0.2 }}
                 className="text-primary"
               >
                 <Check size={16} />
@@ -74,7 +76,7 @@ export function CopyEmail({ email }: { email: string }) {
                 initial={{ scale: 0.4, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.4, opacity: 0 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: reduced ? 0 : 0.2 }}
               >
                 <Copy size={16} />
               </m.span>

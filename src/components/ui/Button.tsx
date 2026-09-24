@@ -3,13 +3,13 @@ import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'reac
 type Variant = 'primary' | 'secondary' | 'ghost'
 
 const base =
-  'group relative inline-flex items-center justify-center gap-2 rounded-full font-medium select-none ' +
+  'group relative inline-flex items-center justify-center gap-2 rounded-xl font-medium select-none ' +
   'transition-[transform,background-color,border-color,color,box-shadow] duration-200 ease-(--ease-out-soft) ' +
   'active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50'
 
 const sizes = {
-  md: 'h-11 px-5 text-[0.9375rem]',
-  sm: 'h-9 px-4 text-sm',
+  md: 'min-h-12 px-5 py-2 text-[0.9375rem]',
+  sm: 'min-h-11 px-4 py-2 text-sm',
 }
 
 const variants: Record<Variant, string> = {
@@ -68,7 +68,7 @@ export function IconButton({
       aria-label={label}
       title={label}
       className={
-        'inline-flex size-10 items-center justify-center rounded-full text-muted transition-[color,background-color,transform] duration-200 ' +
+        'inline-flex size-11 shrink-0 items-center justify-center rounded-xl text-muted transition-[color,background-color,transform] duration-200 ' +
         'hover:bg-surface hover:text-text active:scale-95 ' +
         className
       }

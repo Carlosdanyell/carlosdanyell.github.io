@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight, Close } from '@/components/ui/icons'
 import { ResponsiveImage } from '@/components/ui/ResponsiveImage'
 import { TagList } from '@/components/ui/Tag'
 import type { Project, Shot } from '@/data/projects'
+import { usePrefersReducedMotion } from '@/hooks/useMediaQuery'
 import { useI18n } from '@/i18n/context'
 import { lockScroll } from '@/lib/scroll'
 import { ProjectLinkButton } from './ProjectLinkButton'
@@ -24,6 +25,7 @@ const ease = [0.22, 1, 0.36, 1] as const
  */
 export default function ProjectModal({ project, onClose }: Props) {
   const { t } = useI18n()
+  const reduced = usePrefersReducedMotion()
   const text = t.projects.items[project.id]
   const dialogRef = useRef<HTMLDialogElement>(null)
   const [visible, setVisible] = useState(true)
@@ -62,10 +64,10 @@ export default function ProjectModal({ project, onClose }: Props) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: reduced ? 0 : 0.2 }}
           >
             <div
-              className="absolute inset-0 bg-[rgb(5_8_14/0.72)] backdrop-blur-sm"
+              className="absolute inset-0 bg-(--overlay) backdrop-blur-sm"
               onClick={requestClose}
               aria-hidden="true"
             />
@@ -75,7 +77,7 @@ export default function ProjectModal({ project, onClose }: Props) {
                 initial={{ opacity: 0, y: 24, scale: 0.985 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 16, scale: 0.985 }}
-                transition={{ duration: 0.32, ease }}
+                transition={{ duration: reduced ? 0 : 0.32, ease }}
               >
                 <header className="flex items-center justify-between gap-4 border-b border-border px-5 py-3.5 sm:px-7">
                   <p className="flex items-center gap-3">
@@ -160,6 +162,7 @@ export default function ProjectModal({ project, onClose }: Props) {
 
 function Gallery({ shots, alts }: { shots: Shot[]; alts: Record<string, string> }) {
   const { t } = useI18n()
+  const reduced = usePrefersReducedMotion()
   const [index, setIndex] = useState(0)
   const [direction, setDirection] = useState(1)
   const shot = shots[index]
@@ -190,7 +193,7 @@ function Gallery({ shots, alts }: { shots: Shot[]; alts: Record<string, string> 
             initial={{ opacity: 0, x: direction * 24 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: direction * -24 }}
-            transition={{ duration: 0.3, ease }}
+            transition={{ duration: reduced ? 0 : 0.3, ease }}
           >
             <Framed shot={shot} alt={alts[shot.id] ?? ''} />
             <figcaption className="mt-4 max-w-md text-center text-sm text-muted">{alts[shot.id]}</figcaption>
@@ -203,7 +206,7 @@ function Gallery({ shots, alts }: { shots: Shot[]; alts: Record<string, string> 
               type="button"
               onClick={() => go(index - 1)}
               aria-label={t.projects.prev}
-              className="absolute top-1/2 left-2 inline-flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-bg/80 text-text backdrop-blur transition-[transform,border-color] hover:border-border-strong active:scale-95 sm:left-3"
+              className="absolute top-1/2 left-2 inline-flex size-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-bg/80 text-text backdrop-blur transition-[transform,border-color] hover:border-border-strong active:scale-95 sm:left-3"
             >
               <ChevronLeft size={18} />
             </button>
@@ -211,7 +214,7 @@ function Gallery({ shots, alts }: { shots: Shot[]; alts: Record<string, string> 
               type="button"
               onClick={() => go(index + 1)}
               aria-label={t.projects.next}
-              className="absolute top-1/2 right-2 inline-flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-bg/80 text-text backdrop-blur transition-[transform,border-color] hover:border-border-strong active:scale-95 sm:right-3"
+              className="absolute top-1/2 right-2 inline-flex size-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-bg/80 text-text backdrop-blur transition-[transform,border-color] hover:border-border-strong active:scale-95 sm:right-3"
             >
               <ChevronRight size={18} />
             </button>

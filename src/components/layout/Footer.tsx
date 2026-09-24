@@ -20,7 +20,7 @@ export function Footer() {
             scrollToTop()
             document.querySelector<HTMLElement>('#hero-title')?.focus({ preventScroll: true })
           }}
-          className="group inline-flex items-center gap-2 self-start rounded-full border border-border px-4 py-2 text-sm text-muted transition-[color,border-color] hover:border-border-strong hover:text-text sm:self-auto"
+          className="group inline-flex items-center gap-2 min-h-11 self-start rounded-xl border border-border px-4 py-2 text-sm text-muted transition-[color,border-color] hover:border-border-strong hover:text-text sm:self-auto"
         >
           <ArrowUp size={16} className="transition-transform duration-200 group-hover:-translate-y-0.5" />
           {t.a11y.backToTop}

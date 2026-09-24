@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 @import './fonts.css';
 @import './tokens.css';
+@import './editorial.css';
+@import '../sections/Projects/projects.css';
 
 /* O tema vem de data-theme no <html>, definido antes da pintura (index.html). */
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
@@ -67,23 +69,6 @@
 }
 
 @layer components {
-  .container-page {
-    width: 100%;
-    max-width: 76rem;
-    margin-inline: auto;
-    padding-inline: 1rem;
-  }
-  @media (min-width: 640px) {
-    .container-page {
-      padding-inline: 1.5rem;
-    }
-  }
-  @media (min-width: 1024px) {
-    .container-page {
-      padding-inline: 2rem;
-    }
-  }
-
   .label-mono {
     font-family: var(--font-mono);
     font-size: 0.75rem;
@@ -98,11 +83,11 @@
   }
 
   /* Superfície padrão de card: borda fina, fundo levemente elevado. */
-  .card {
+  :where(.card) {
     position: relative;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 1.25rem;
+    border-radius: var(--radius-card);
   }
 
   /*
@@ -183,12 +168,6 @@ html.modal-open {
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  html:not(.lenis) {
-    scroll-behavior: smooth;
-  }
-}
-
 /* Aplicada só durante a troca de tema (useTheme). */
 html.theme-transition,
 html.theme-transition *,
@@ -197,44 +176,6 @@ html.theme-transition *::after {
   transition-property: background-color, border-color, color, fill, stroke, box-shadow !important;
   transition-duration: 280ms !important;
   transition-timing-function: ease !important;
-}
-
-/* Brilho do hero: gradiente radial que deriva lentamente. */
-.hero-glow {
-  background: radial-gradient(closest-side, var(--glow), transparent 70%);
-  filter: blur(8px);
-  transform: translate(-50%, 0);
-  animation: hero-drift 22s ease-in-out infinite alternate;
-}
-@keyframes hero-drift {
-  0% {
-    transform: translate(-58%, 0) scale(1);
-  }
-  50% {
-    transform: translate(-44%, 4%) scale(1.06);
-  }
-  100% {
-    transform: translate(-52%, -3%) scale(0.97);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero-glow {
-    animation: none;
-  }
-}
-
-/* Indicador de rolagem do hero. */
-.scroll-cue {
-  animation: scroll-cue 2.4s var(--ease-out-soft) infinite;
-}
-@keyframes scroll-cue {
-  0% {
-    transform: translateY(-100%);
-  }
-  60%,
-  100% {
-    transform: translateY(260%);
-  }
 }
 
 /* Entradas do hero em CSS: rodam já no HTML pré-renderizado, antes do JavaScript. */
@@ -282,6 +223,12 @@ html.theme-transition *::after {
   .fade-up,
   .fade-in {
     animation: none;
+  }
+  html.theme-transition,
+  html.theme-transition *,
+  html.theme-transition *::before,
+  html.theme-transition *::after {
+    transition-duration: 0.01ms !important;
   }
 }
 

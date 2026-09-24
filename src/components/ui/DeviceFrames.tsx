@@ -5,15 +5,18 @@ export function PhoneFrame({ children, className = '' }: { children: ReactNode; 
   return (
     <div
       className={
-        'relative rounded-[2.4rem] bg-(--device) p-[0.55rem] shadow-[0_0_0_1px_var(--device-edge),0_30px_60px_-30px_rgba(0,0,0,0.65)] ' +
+        'relative rounded-[2.4rem] bg-(--device) p-[0.55rem] shadow-[0_0_0_1px_var(--device-edge),0_30px_60px_-30px_var(--device-shadow)] ' +
         className
       }
     >
-      <div className="relative overflow-hidden rounded-[1.9rem] bg-black" style={{ aspectRatio: '412 / 892' }}>
+      <div
+        className="relative overflow-hidden rounded-[1.9rem] bg-(--device-screen)"
+        style={{ aspectRatio: '412 / 892' }}
+      >
         {children}
         <span
           aria-hidden="true"
-          className="absolute top-2.5 left-1/2 z-10 size-2.5 -translate-x-1/2 rounded-full bg-black shadow-[0_0_0_2px_rgba(255,255,255,0.06)]"
+          className="absolute top-2.5 left-1/2 z-10 size-2.5 -translate-x-1/2 rounded-full bg-(--device-screen) shadow-[0_0_0_2px_var(--device-highlight)]"
         />
       </div>
     </div>
@@ -33,7 +36,7 @@ export function BrowserFrame({
   return (
     <div
       className={
-        'overflow-hidden rounded-xl border border-border-strong bg-surface shadow-[0_30px_60px_-30px_rgba(0,0,0,0.55)] ' +
+        'overflow-hidden rounded-xl border border-border-strong bg-surface shadow-[0_30px_60px_-30px_var(--device-shadow)] ' +
         className
       }
     >

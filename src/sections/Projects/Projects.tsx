@@ -3,13 +3,13 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { useI18n } from '@/i18n/context'
 import { SECTION_IDS } from '@/sections/ids'
 
-// A grade (visuais, carrossel, inclinação) fica num chunk separado; o cabeçalho e a âncora ficam no principal.
+// A grade e a galeria ficam em chunks separados; o cabeçalho e a âncora ficam no principal.
 const ProjectGrid = lazy(() => import('./ProjectGrid'))
 
 export function Projects() {
   const { t } = useI18n()
   return (
-    <section id={SECTION_IDS.projects} aria-labelledby="projects-title" className="relative py-20 md:py-28">
+    <section id={SECTION_IDS.projects} aria-labelledby="projects-title" className="section-shell projects-section">
       <div className="container-page">
         <SectionHeading
           id="projects-title"

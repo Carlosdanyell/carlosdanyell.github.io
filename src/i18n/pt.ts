@@ -30,6 +30,8 @@ export const pt = {
     contact: 'Contato',
   },
   hero: {
+    portfolio: 'Portfólio profissional',
+    disciplines: ['Contabilidade.', 'Controles.', 'Automação.'],
     role: 'Contador | CRC-PR',
     name: 'Carlos Danyell da Silva',
     tagline: 'Contabilidade, controles internos e automação de processos contábeis.',

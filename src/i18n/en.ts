@@ -30,6 +30,8 @@ export const en: Dict = {
     contact: 'Contact',
   },
   hero: {
+    portfolio: 'Professional portfolio',
+    disciplines: ['Accounting.', 'Controls.', 'Automation.'],
     role: 'Accountant | CRC-PR',
     name: 'Carlos Danyell da Silva',
     tagline: 'Accounting, internal controls and automation of accounting processes.',
