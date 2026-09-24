@@ -111,6 +111,9 @@ export const en: Dict = {
     live: 'Visit site',
     play: 'Play',
     code: 'Code',
+    download: 'Download APK',
+    apkNote:
+      'For Android. During installation, the phone asks for permission to install apps from outside the Play Store.',
     close: 'Close',
     highlights: 'Highlights',
     stack: 'Tech stack',

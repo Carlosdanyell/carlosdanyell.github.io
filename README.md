@@ -83,8 +83,13 @@ src/
    },
    ```
 
-   Os tipos de link são `live` (Ver site), `play` (Jogar) e `code` (Código). Use `status: 'in-development'` para
-   mostrar o selo “Em desenvolvimento” e `fictionalData: true` quando as capturas usarem dados fictícios.
+   Os tipos de link são `live` (Ver site), `play` (Jogar), `code` (Código) e `download` (Baixar APK, com o tamanho
+   em `size`). Use `status: 'in-development'` para mostrar o selo “Em desenvolvimento” e `fictionalData: true` quando
+   as capturas usarem dados fictícios.
+
+   O APK do DevFinance fica numa release deste repositório, com o arquivo `devfinance.apk`. O link usa
+   `releases/latest/download/devfinance.apk`, então uma versão nova só precisa de uma release nova com o arquivo de
+   mesmo nome; o site não muda.
 
 5. **Posição na grade.** Em `src/sections/Projects/ProjectGrid.tsx`, inclua um `<ProjectCard>` com o layout desejado:
    `featured` (largura total, destaque), `stacked` (visual em cima, texto embaixo) ou `wide` (lado a lado). As colunas

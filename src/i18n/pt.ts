@@ -111,6 +111,8 @@ export const pt = {
     live: 'Ver site',
     play: 'Jogar',
     code: 'Código',
+    download: 'Baixar APK',
+    apkNote: 'Para Android. Na instalação, o celular pede permissão para instalar apps de fora da Play Store.',
     close: 'Fechar',
     highlights: 'Destaques',
     stack: 'Tecnologias',

@@ -1,13 +1,14 @@
 import { AnimatePresence, m } from 'motion/react'
 import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
-import { ButtonLink, IconButton } from '@/components/ui/Button'
+import { IconButton } from '@/components/ui/Button'
 import { BrowserFrame, PhoneFrame } from '@/components/ui/DeviceFrames'
-import { ArrowUpRight, ChevronLeft, ChevronRight, Close } from '@/components/ui/icons'
+import { ChevronLeft, ChevronRight, Close } from '@/components/ui/icons'
 import { ResponsiveImage } from '@/components/ui/ResponsiveImage'
 import { TagList } from '@/components/ui/Tag'
 import type { Project, Shot } from '@/data/projects'
 import { useI18n } from '@/i18n/context'
 import { lockScroll } from '@/lib/scroll'
+import { ProjectLinkButton } from './ProjectLinkButton'
 import { ReconciliationIllustration } from './visuals'
 
 interface Props {
@@ -130,20 +131,17 @@ export default function ProjectModal({ project, onClose }: Props) {
                       {project.links.length ? (
                         <div className="mt-8 flex flex-wrap gap-2">
                           {project.links.map((link, i) => (
-                            <ButtonLink
+                            <ProjectLinkButton
                               key={link.href}
-                              size="sm"
+                              link={link}
+                              name={text.name}
                               variant={i === 0 ? 'primary' : 'secondary'}
-                              href={link.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label={`${t.projects[link.kind]}: ${text.name} ${t.a11y.newTab}`}
-                            >
-                              {t.projects[link.kind]}
-                              <ArrowUpRight size={15} />
-                            </ButtonLink>
+                            />
                           ))}
                         </div>
+                      ) : null}
+                      {project.links.some((link) => link.kind === 'download') ? (
+                        <p className="mt-3 max-w-md text-xs leading-relaxed text-muted">{t.projects.apkNote}</p>
                       ) : null}
                       {project.fictionalData ? (
                         <p className="mt-6 font-mono text-[0.7rem] text-muted">{t.projects.fictional}</p>

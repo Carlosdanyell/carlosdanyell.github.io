@@ -1,11 +1,12 @@
 import { m } from 'motion/react'
-import { Button, ButtonLink } from '@/components/ui/Button'
-import { ArrowRight, ArrowUpRight } from '@/components/ui/icons'
+import { Button } from '@/components/ui/Button'
+import { ArrowRight } from '@/components/ui/icons'
 import { TagList } from '@/components/ui/Tag'
 import type { Project } from '@/data/projects'
 import { useTilt } from '@/hooks/useTilt'
 import { useI18n } from '@/i18n/context'
 import { PhoneCarousel } from './PhoneCarousel'
+import { ProjectLinkButton } from './ProjectLinkButton'
 import { BrowserVisual, PhoneFan, ReconciliationIllustration } from './visuals'
 
 interface Props {
@@ -106,21 +107,7 @@ export function ProjectCard({ project, layout, onOpen }: Props) {
           <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-0.5" />
         </Button>
         {project.links.map((link) => (
-          <ButtonLink
-            key={link.href}
-            size="sm"
-            variant="ghost"
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${t.projects[link.kind]}: ${text.name} ${t.a11y.newTab}`}
-          >
-            {t.projects[link.kind]}
-            <ArrowUpRight
-              size={15}
-              className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
-          </ButtonLink>
+          <ProjectLinkButton key={link.href} link={link} name={text.name} variant="ghost" animatedIcon />
         ))}
       </div>
       {project.fictionalData ? <p className="mt-4 font-mono text-[0.7rem] text-muted">{t.projects.fictional}</p> : null}

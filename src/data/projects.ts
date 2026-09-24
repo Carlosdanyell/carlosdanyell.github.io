@@ -22,8 +22,10 @@ export interface Shot {
 }
 
 export interface ProjectLink {
-  kind: 'live' | 'play' | 'code'
+  kind: 'live' | 'play' | 'code' | 'download'
   href: string
+  /** Tamanho do arquivo, mostrado junto do link de download. */
+  size?: string
 }
 
 export interface Project {
@@ -56,7 +58,15 @@ export const projects: Project[] = [
     id: 'devfinance',
     index: '01',
     stack: ['React Native', 'TypeScript', 'Prisma', 'SQLite'],
-    links: [],
+    // O APK fica numa release deste repositório. "latest" mantém o link igual quando
+    // sair versão nova: basta publicar outra release com o arquivo devfinance.apk.
+    links: [
+      {
+        kind: 'download',
+        href: 'https://github.com/Carlosdanyell/carlosdanyell.github.io/releases/latest/download/devfinance.apk',
+        size: '85 MB',
+      },
+    ],
     visual: 'phone-carousel',
     fictionalData: true,
     shots: shots('devfinance', [
