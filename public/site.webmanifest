@@ -1,0 +1,14 @@
+{
+  "name": "Carlos Danyell da Silva · Contador | CRC-PR",
+  "short_name": "Carlos Danyell",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F7F8FA",
+  "theme_color": "#F7F8FA",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

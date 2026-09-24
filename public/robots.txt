@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+# Os currículos têm telefone de contato: ficam fora dos resultados de busca.
+Disallow: /curriculo-carlos-danyell.pdf
+Disallow: /resume-carlos-danyell.pdf
+
+Sitemap: https://carlosdanyell.github.io/sitemap.xml

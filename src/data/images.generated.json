@@ -1,0 +1,135 @@
+{
+  "devcount/01-inicio": {
+    "width": 2880,
+    "height": 1800,
+    "src": "/images/devcount/01-inicio-960.webp",
+    "srcset": "/images/devcount/01-inicio-480.webp 480w, /images/devcount/01-inicio-960.webp 960w, /images/devcount/01-inicio-1440.webp 1440w",
+    "placeholder": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACQAQCdASoQAAoAA4BaJZwAAtqIbcAA/vUUm6pHDf/t/0IH/J4yla6iaAVoAAAA"
+  },
+  "devcount/02-servicos": {
+    "width": 2880,
+    "height": 1800,
+    "src": "/images/devcount/02-servicos-960.webp",
+    "srcset": "/images/devcount/02-servicos-480.webp 480w, /images/devcount/02-servicos-960.webp 960w, /images/devcount/02-servicos-1440.webp 1440w",
+    "placeholder": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoQAAoAA4BaJZwCdAEO/gOOAAD+8ha70VO0OD4OitZ1gAAA"
+  },
+  "devcount/03-como-funciona": {
+    "width": 2880,
+    "height": 1800,
+    "src": "/images/devcount/03-como-funciona-960.webp",
+    "srcset": "/images/devcount/03-como-funciona-480.webp 480w, /images/devcount/03-como-funciona-960.webp 960w, /images/devcount/03-como-funciona-1440.webp 1440w",
+    "placeholder": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoQAAoAA4BaJZQCdAD0cVIlAAD+8ha747j9JEW2iSYvFd9jqoaGPQAA"
+  },
+  "devcount/04-contato": {
+    "width": 2880,
+    "height": 1800,
+    "src": "/images/devcount/04-contato-960.webp",
+    "srcset": "/images/devcount/04-contato-480.webp 480w, /images/devcount/04-contato-960.webp 960w, /images/devcount/04-contato-1440.webp 1440w",
+    "placeholder": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQAAoAA4BaJZQCdAEO+mQ2AAD+8j5NfrPdOyAaxmL2Mf1AdQdnDbXeoVscAAAA"
+  },
+  "devcount/05-mobile": {
+    "width": 1170,
+    "height": 2532,
+    "src": "/images/devcount/05-mobile-960.webp",
+    "srcset": "/images/devcount/05-mobile-480.webp 480w, /images/devcount/05-mobile-960.webp 960w, /images/devcount/05-mobile-1170.webp 1170w",
+    "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABwBACdASoQACMAPu1mqE8ppaOiKqwBMB2JZQC2yEXttmQdxEk0NeHwTo8PwAD+9zsMwkkHNvE29NMMet7w395mubiUOxBe8lfcDpxLlgGVmb+0aIPgGKg83WCfPg0Ljd2BCkHV4usvPgoGSm2AAAAA"
+  },
+  "devfinance/01-inicio": {
+    "width": 1236,
+    "height": 2676,
+    "src": "/images/devfinance/01-inicio-960.webp",
+    "srcset": "/images/devfinance/01-inicio-480.webp 480w, /images/devfinance/01-inicio-960.webp 960w, /images/devfinance/01-inicio-1236.webp 1236w",
+    "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwBACdASoQACMAPu1iq04ppaQiKqwBMB2JYgDIBExBUmD91tKAwmHTOAAA9wQmcCpOU9fzYP97ncFe3P1kTVvkuWFKE4jQloRWeLf52bdaseO1TxmOiNhwRwLP0gAA"
+  },
+  "devfinance/02-planejamento": {
+    "width": 1236,
+    "height": 2676,
+    "src": "/images/devfinance/02-planejamento-960.webp",
+    "srcset": "/images/devfinance/02-planejamento-480.webp 480w, /images/devfinance/02-planejamento-960.webp 960w, /images/devfinance/02-planejamento-1236.webp 1236w",
+    "placeholder": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAABwAwCdASoQACMAPu1mqU8ppaOiKqwBMB2JZ2bvV5kOlikfMEAA/vBNVYW8plsoOWA6RSzz67Dbr9cmrNWq3h59rYuWm2sOI9eDyxIAAAA="
+  },
+  "devfinance/03-cartoes": {
+    "width": 1236,
+    "height": 2676,
+    "src": "/images/devfinance/03-cartoes-960.webp",
+    "srcset": "/images/devfinance/03-cartoes-480.webp 480w, /images/devfinance/03-cartoes-960.webp 960w, /images/devfinance/03-cartoes-1236.webp 1236w",
+    "placeholder": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAwCdASoQACMAPt1apE2opSOiNUgBEBuJZgC9WCzaKtCZHCl55PYAAP7xzA5Va5AVh59s3WLY1h0nPtIGlrWmpJwhCgJG0kjw6akAAAA="
+  },
+  "devfinance/04-saude-financeira": {
+    "width": 1236,
+    "height": 2676,
+    "src": "/images/devfinance/04-saude-financeira-960.webp",
+    "srcset": "/images/devfinance/04-saude-financeira-480.webp 480w, /images/devfinance/04-saude-financeira-960.webp 960w, /images/devfinance/04-saude-financeira-1236.webp 1236w",
+    "placeholder": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAgCdASoQACMAPu1irE4ppa2iKqwBsB2JaQAAT4CAAP7wgBZDHk7MO/EvYcwAAAA="
+  },
+  "devfinance/05-projecao": {
+    "width": 1236,
+    "height": 2676,
+    "src": "/images/devfinance/05-projecao-960.webp",
+    "srcset": "/images/devfinance/05-projecao-480.webp 480w, /images/devfinance/05-projecao-960.webp 960w, /images/devfinance/05-projecao-1236.webp 1236w",
+    "placeholder": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAgCdASoQACMAPt1Yo02opSMiNUgBEBuJaQAAmCTuIAD+8OUydByXP9dxtvxXoA6quFx8AAA="
+  },
+  "devfinance/06-resumo": {
+    "width": 1236,
+    "height": 2676,
+    "src": "/images/devfinance/06-resumo-960.webp",
+    "srcset": "/images/devfinance/06-resumo-480.webp 480w, /images/devfinance/06-resumo-960.webp 960w, /images/devfinance/06-resumo-1236.webp 1236w",
+    "placeholder": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAgCdASoQACMAPu1srlCppaQiqqgBMB2JaQAAUfYAAP7wTWXzQKU4nN3O9uWBc0ttgAAA"
+  },
+  "ia-games/01-biblioteca": {
+    "width": 824,
+    "height": 1784,
+    "src": "/images/ia-games/01-biblioteca-824.webp",
+    "srcset": "/images/ia-games/01-biblioteca-480.webp 480w, /images/ia-games/01-biblioteca-824.webp 824w",
+    "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACQBACdASoQACMAPulep02pJSOiNVgIASAdCWUAvdAUOulIHLIoGVk1Ps0ldgAA/uwROf9QW7JqKDNH5cRpihh+opvPUs5qxAp9Gqg1UAneXk0CKS2MyDAA"
+  },
+  "ia-games/02-neon-chess": {
+    "width": 824,
+    "height": 1784,
+    "src": "/images/ia-games/02-neon-chess-824.webp",
+    "srcset": "/images/ia-games/02-neon-chess-480.webp 480w, /images/ia-games/02-neon-chess-824.webp 824w",
+    "placeholder": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwBACdASoQACMAPt1YpE2opSOiNUgBEBuJZQDE2Czc725RcXnfW4iPtsAA/vFn7YRPamU/drdgrUfSQQpIvPzv8CfIgmQovpYAu9qWlyTkXiYEeAAAAA=="
+  },
+  "ia-games/03-neon-slither": {
+    "width": 824,
+    "height": 1784,
+    "src": "/images/ia-games/03-neon-slither-824.webp",
+    "srcset": "/images/ia-games/03-neon-slither-480.webp 480w, /images/ia-games/03-neon-slither-824.webp 824w",
+    "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQBACdASoQACMAPt1apE2opSOiNUgBEBuJZQDCgCzZ29f51mAQan9s0AD+8NYQcaPP3PUCn8/agdjB4yYKIeoCEm+n7FHBUPAFle5GQ9rNRzXxPpw8MokB2u2ieqIAAAA="
+  },
+  "ia-games/04-neon-shooter": {
+    "width": 824,
+    "height": 1784,
+    "src": "/images/ia-games/04-neon-shooter-824.webp",
+    "srcset": "/images/ia-games/04-neon-shooter-480.webp 480w, /images/ia-games/04-neon-shooter-824.webp 824w",
+    "placeholder": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACwBACdASoQACMAPt1apU2opSOiNUgBEBuJZQDE2CzdJTaRk99lrBTh6hB6tUYoAP7xYav+kYmD2mC4CcrkaJfGVjY5OJAD/85Ow5Twb4LfAki6AAA="
+  },
+  "ia-games/05-neon-break": {
+    "width": 824,
+    "height": 1784,
+    "src": "/images/ia-games/05-neon-break-824.webp",
+    "srcset": "/images/ia-games/05-neon-break-480.webp 480w, /images/ia-games/05-neon-break-824.webp 824w",
+    "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwBACdASoQACMAPt1apU2opSOiNUgBEBuJZQDImCzakSYasJJ6Nff2AwbLoAD+8WCZte2DAfavGCmvFWPhbOnbHyX6/IGUNdudlnBbzn0qzibqROe2Iab8f5sAAA=="
+  },
+  "ia-games/06-neon-arrow": {
+    "width": 1784,
+    "height": 824,
+    "src": "/images/ia-games/06-neon-arrow-960.webp",
+    "srcset": "/images/ia-games/06-neon-arrow-480.webp 480w, /images/ia-games/06-neon-arrow-960.webp 960w, /images/ia-games/06-neon-arrow-1440.webp 1440w",
+    "placeholder": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAABwAQCdASoQAAcAA4BaJYwCdAF1AAD+8PzsCIHNmX6E4kRr1pG3CybsOKWgAA=="
+  },
+  "ia-games/07-neon-pool": {
+    "width": 1784,
+    "height": 824,
+    "src": "/images/ia-games/07-neon-pool-960.webp",
+    "srcset": "/images/ia-games/07-neon-pool-480.webp 480w, /images/ia-games/07-neon-pool-960.webp 960w, /images/ia-games/07-neon-pool-1440.webp 1440w",
+    "placeholder": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAABQAQCdASoQAAcAA4BaJZQABDOAAP7yveJmEx1HkbatrpY6I/q2wAAA"
+  },
+  "perfil/foto": {
+    "width": 1254,
+    "height": 1254,
+    "src": "/images/perfil/foto-960.webp",
+    "srcset": "/images/perfil/foto-480.webp 480w, /images/perfil/foto-960.webp 960w, /images/perfil/foto-1254.webp 1254w",
+    "placeholder": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAgCdASoQABAAA4BaJYwCdH8AE7EPT7LyAAD+8dK93C97SMcS4rmTBvnNRdGfYDh0tFGwWnS7BbzkiwAAAA=="
+  }
+}

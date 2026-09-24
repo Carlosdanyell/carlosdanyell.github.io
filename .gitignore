@@ -1,0 +1,30 @@
+# Dependências e build
+node_modules
+dist
+dist-ssr
+*.local
+
+# Fontes recortadas (geradas por scripts/subset-fonts.mjs)
+src/assets/fonts
+
+# Imagens de origem (processadas para public/images pelo script `npm run images`)
+assets-origem
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.sw?
+
+# Relatórios locais
+lighthouse
+
+# Configuração local do Claude Code
+.claude

@@ -1,0 +1,32 @@
+/* Fontes variáveis auto-hospedadas. Nenhuma requisição externa. */
+
+/* Sora: apenas hero e títulos de seção (h1, h2). */
+@import '@fontsource-variable/sora/wght.css';
+
+/*
+ * Geist e Geist Mono vêm do pacote npm "geist", recortadas para o latim por
+ * scripts/subset-fonts.mjs (roda antes do dev e do build). O unicode-range é o
+ * mesmo do recorte: fora dele, o navegador usa a fonte de sistema.
+ */
+@font-face {
+  font-family: 'Geist';
+  src: url('../assets/fonts/geist-latin.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range:
+    U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201E, U+2020-2022,
+    U+2026, U+2039-203A, U+20AC, U+2122, U+2190-2193, U+2212;
+}
+
+/* Geist Mono: rótulos, datas, tags de tecnologia e números. */
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('../assets/fonts/geist-mono-latin.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range:
+    U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201E, U+2020-2022,
+    U+2026, U+2039-203A, U+20AC, U+2122, U+2190-2193, U+2212;
+}

@@ -1,0 +1,48 @@
+/*
+ * Tokens de design. O claro é o tema padrão (também sem JavaScript); o escuro
+ * vale quando o visitante escolhe no menu (a escolha fica salva).
+ * O vermelho (--accent) é reservado a detalhes pontuais: marcadores e o
+ * indicador da seção ativa. Nunca em blocos grandes nem como cor de texto.
+ */
+:root,
+[data-theme='light'] {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --surface-2: #f1f3f6;
+  --border: #e3e7ed;
+  --border-strong: #cdd4de;
+  --text: #0f172a;
+  --muted: #5b6472;
+  --primary: #1e6495;
+  --primary-contrast: #ffffff;
+  --accent: #d93a3f;
+
+  --grid-line: rgba(15, 23, 42, 0.055);
+  --grid-line-strong: rgba(30, 100, 149, 0.3);
+  --glow: rgba(30, 100, 149, 0.1);
+  --nav-bg: rgba(247, 248, 250, 0.7);
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 24px 48px -28px rgba(15, 23, 42, 0.22);
+  --device: #10151f;
+  --device-edge: #2a3240;
+}
+
+[data-theme='dark'] {
+  --bg: #0a0f1a;
+  --surface: #111827;
+  --surface-2: #0d1320;
+  --border: #1f2937;
+  --border-strong: #2b3646;
+  --text: #e6eaf2;
+  --muted: #8b95a7;
+  --primary: #4c8dff;
+  --primary-contrast: #0a0f1a;
+  --accent: #e5484d;
+
+  --grid-line: rgba(139, 149, 167, 0.07);
+  --grid-line-strong: rgba(76, 141, 255, 0.28);
+  --glow: rgba(76, 141, 255, 0.16);
+  --nav-bg: rgba(10, 15, 26, 0.62);
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 24px 48px -24px rgba(0, 0, 0, 0.6);
+  --device: #1b2231;
+  --device-edge: #2c3647;
+}

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Página não encontrada · Carlos Danyell da Silva</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#F7F8FA" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      ;(function () {
+        var theme, lang
+        try {
+          theme = localStorage.getItem('cd:theme')
+          lang = localStorage.getItem('cd:lang')
+        } catch (e) {}
+        // Claro por padrão; o escuro só entra quando escolhido no menu.
+        if (theme !== 'light' && theme !== 'dark') theme = 'light'
+        document.documentElement.dataset.theme = theme
+        if (lang === 'en') document.documentElement.lang = 'en'
+      })()
+    </script>
+    <style>
+      :root,
+      [data-theme='light'] {
+        --bg: #f7f8fa;
+        --surface: #ffffff;
+        --border: #e3e7ed;
+        --text: #0f172a;
+        --muted: #5b6472;
+        --primary: #1e6495;
+        --primary-contrast: #ffffff;
+        --accent: #d93a3f;
+        --grid: rgba(15, 23, 42, 0.055);
+      }
+      [data-theme='dark'] {
+        --bg: #0a0f1a;
+        --surface: #111827;
+        --border: #1f2937;
+        --text: #e6eaf2;
+        --muted: #8b95a7;
+        --primary: #4c8dff;
+        --primary-contrast: #0a0f1a;
+        --accent: #e5484d;
+        --grid: rgba(139, 149, 167, 0.07);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+        padding: 1.5rem;
+        background: var(--bg);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        background-image: linear-gradient(to right, var(--grid) 1px, transparent 1px),
+          linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+        background-size: 56px 56px;
+      }
+      main {
+        max-width: 32rem;
+        text-align: center;
+      }
+      .code {
+        font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+        font-size: clamp(4.5rem, 18vw, 7.5rem);
+        letter-spacing: -0.05em;
+        line-height: 1;
+        font-variant-numeric: tabular-nums;
+      }
+      .label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-bottom: 1.25rem;
+        font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+      h1 {
+        margin-top: 1.25rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      p {
+        margin-top: 0.75rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      a {
+        display: inline-flex;
+        margin-top: 2rem;
+        padding: 0.75rem 1.25rem;
+        border-radius: 999px;
+        background: var(--primary);
+        color: var(--primary-contrast);
+        font-weight: 500;
+        text-decoration: none;
+        transition: transform 0.2s;
+      }
+      a:hover {
+        transform: translateY(-1px);
+      }
+      a:focus-visible {
+        outline: 2px solid var(--primary);
+        outline-offset: 3px;
+      }
+      [lang='en'] .pt,
+      [lang='pt-BR'] .en {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="label"><span class="dot" aria-hidden="true"></span>Carlos Danyell da Silva</p>
+      <div class="code" aria-hidden="true">404</div>
+      <h1><span class="pt">Página não encontrada</span><span class="en">Page not found</span></h1>
+      <p>
+        <span class="pt">O endereço pode ter mudado ou não existe. Volte ao início para ver o portfólio.</span>
+        <span class="en">This address may have moved or does not exist. Go back to the home page to see the portfolio.</span>
+      </p>
+      <a href="/"><span class="pt">Voltar ao início</span><span class="en">Back to home</span></a>
+    </main>
+  </body>
+</html>
