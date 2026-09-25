@@ -15,8 +15,8 @@ export function CursorHighlight() {
 function Ring() {
   const x = useMotionValue(-100)
   const y = useMotionValue(-100)
-  const sx = useSpring(x, { stiffness: 500, damping: 40, mass: 0.4 })
-  const sy = useSpring(y, { stiffness: 500, damping: 40, mass: 0.4 })
+  const sx = useSpring(x, { stiffness: 380, damping: 38, mass: 0.5 })
+  const sy = useSpring(y, { stiffness: 380, damping: 38, mass: 0.5 })
   const [hover, setHover] = useState(false)
   const [visible, setVisible] = useState(false)
 
@@ -49,7 +49,7 @@ function Ring() {
         opacity: visible ? 1 : 0,
         backgroundColor: hover ? 'color-mix(in oklab, var(--primary) 10%, transparent)' : 'rgba(0,0,0,0)',
       }}
-      transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
     />
   )
 }

@@ -27,8 +27,8 @@ export function HeroBackground() {
     let frame = 0
 
     const tick = () => {
-      x += (targetX - x) * 0.12
-      y += (targetY - y) * 0.12
+      x += (targetX - x) * 0.07
+      y += (targetY - y) * 0.07
       el.style.setProperty('--mx', `${(x * 100).toFixed(2)}%`)
       el.style.setProperty('--my', `${(y * 100).toFixed(2)}%`)
       frame = Math.abs(targetX - x) + Math.abs(targetY - y) > 0.0005 ? requestAnimationFrame(tick) : 0

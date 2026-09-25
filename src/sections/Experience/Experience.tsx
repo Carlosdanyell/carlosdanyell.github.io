@@ -14,7 +14,7 @@ export function Experience() {
   const reduced = usePrefersReducedMotion()
   const { scrollYProgress } = useScroll({ target: listRef, offset: ['start 80%', 'end 65%'] })
   // A mola tira o tranco da roda do mouse: o trilho acompanha a rolagem sem pular.
-  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, mass: 0.4 })
+  const progress = useSpring(scrollYProgress, { stiffness: 70, damping: 26, mass: 0.6 })
   return (
     <section id={SECTION_IDS.experience} aria-labelledby="experience-title" className="section-shell">
       <div className="container-page experience-layout">

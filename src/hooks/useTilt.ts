@@ -15,7 +15,7 @@ export function useTilt() {
 
   const px = useMotionValue(0.5)
   const py = useMotionValue(0.5)
-  const spring = { stiffness: 180, damping: 22, mass: 0.5 }
+  const spring = { stiffness: 110, damping: 20, mass: 0.7 }
   const rotateY = useSpring(useTransform(px, [0, 1], [-MAX_DEG, MAX_DEG]), spring)
   const rotateX = useSpring(useTransform(py, [0, 1], [MAX_DEG, -MAX_DEG]), spring)
 

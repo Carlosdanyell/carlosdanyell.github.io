@@ -394,6 +394,10 @@
   .contact-links {
     width: 100%;
   }
+  .nav-glass {
+    background: var(--nav-bg);
+    backdrop-filter: saturate(1.6) blur(16px);
+  }
   .navbar-brand {
     min-height: 44px;
   }
@@ -600,8 +604,8 @@
     }
     .skill-card {
       transition:
-        transform 250ms var(--ease-out-soft),
-        border-color 250ms;
+        transform 450ms var(--ease-out-soft),
+        border-color 450ms;
     }
     .skill-card:hover {
       transform: translateY(-3px);
@@ -612,13 +616,13 @@
 
 .reveal {
   transition:
-    opacity 650ms var(--ease-out-soft),
-    transform 650ms var(--ease-out-soft);
-  transition-delay: var(--reveal-delay, 0s);
+    opacity calc(650ms * var(--motion-scale)) var(--ease-out-soft),
+    transform calc(650ms * var(--motion-scale)) var(--ease-out-soft);
+  transition-delay: calc(var(--reveal-delay, 0s) * var(--motion-scale));
 }
 .reveal[data-revealed='false'] {
   opacity: 0;
-  transform: translateY(var(--reveal-y, 18px));
+  transform: translateY(var(--reveal-y, 24px));
 }
 .reveal[data-revealed='true'] {
   opacity: 1;
@@ -628,7 +632,7 @@
   transform: scale(0.985);
 }
 .project-preview-inner {
-  transition: transform 850ms var(--ease-out-soft);
+  transition: transform calc(850ms * var(--motion-scale)) var(--ease-out-soft);
 }
 
 /* Quem imprime ou salva em PDF recebe tudo, inclusive o que ainda não entrou na tela. */
@@ -654,7 +658,7 @@
   border-radius: 50%;
   background: radial-gradient(closest-side, var(--glow), transparent 72%);
   transform: translate(-50%, 0);
-  animation: hero-drift 22s ease-in-out infinite alternate;
+  animation: hero-drift 32s ease-in-out infinite alternate;
 }
 @keyframes hero-drift {
   0% {
@@ -683,7 +687,7 @@
     0 0;
   mask-image: radial-gradient(280px circle at var(--mx, 68%) var(--my, 32%), #000, transparent 72%);
   opacity: 0;
-  transition: opacity 500ms var(--ease-out-soft);
+  transition: opacity 800ms var(--ease-out-soft);
 }
 .hero-bg[data-active='true'] .hero-grid-spot {
   opacity: 0.9;
@@ -701,7 +705,7 @@
 
 /* Indicador de rolagem: a seta desce e volta. */
 .hero-scroll svg {
-  animation: hero-nudge 2.4s var(--ease-out-soft) infinite;
+  animation: hero-nudge 3.2s var(--ease-out-soft) infinite;
 }
 @keyframes hero-nudge {
   0%,
@@ -724,7 +728,7 @@
   border-radius: 50%;
   border: 1px solid var(--accent);
   opacity: 0;
-  animation: dot-ping 2.6s var(--ease-out-soft) infinite;
+  animation: dot-ping 3.4s var(--ease-out-soft) infinite;
 }
 @keyframes dot-ping {
   0% {
@@ -741,7 +745,7 @@
 /* Cabeçalho de seção: o fio ao lado do rótulo se desenha quando a seção entra. */
 .section-rule {
   transform-origin: left;
-  transition: transform 900ms var(--ease-out-soft) 150ms;
+  transition: transform calc(900ms * var(--motion-scale)) var(--ease-out-soft) calc(150ms * var(--motion-scale));
 }
 .reveal[data-revealed='false'] .section-rule {
   transform: scaleX(0);
@@ -750,9 +754,9 @@
 /* Itens de lista entram em sequência depois do cartão (--i vem do componente). */
 .reveal .stagger-item {
   transition:
-    opacity 500ms var(--ease-out-soft),
-    transform 500ms var(--ease-out-soft);
-  transition-delay: calc(var(--reveal-delay, 0s) + 120ms + var(--i, 0) * 45ms);
+    opacity calc(500ms * var(--motion-scale)) var(--ease-out-soft),
+    transform calc(500ms * var(--motion-scale)) var(--ease-out-soft);
+  transition-delay: calc((var(--reveal-delay, 0s) + 120ms + var(--i, 0) * 45ms) * var(--motion-scale));
 }
 .reveal[data-revealed='false'] .stagger-item {
   opacity: 0;
@@ -762,8 +766,8 @@
 /* Linha do tempo: o marcador acende e pulsa uma vez quando o cartão entra. */
 .timeline-dot {
   transition:
-    transform 450ms var(--ease-out-soft),
-    border-color 450ms;
+    transform calc(450ms * var(--motion-scale)) var(--ease-out-soft),
+    border-color calc(450ms * var(--motion-scale));
 }
 .timeline-item:has(.reveal[data-revealed='false']) .timeline-dot {
   transform: scale(0.4);
@@ -802,7 +806,7 @@
 /* Desktop com mouse: prévia do projeto aproxima um pouco no hover. */
 @media (hover: hover) and (pointer: fine) {
   .project-preview-button > :first-child {
-    transition: transform 600ms var(--ease-out-soft);
+    transition: transform 900ms var(--ease-out-soft);
   }
   .project-preview-button:hover > :first-child {
     transform: scale(1.025);

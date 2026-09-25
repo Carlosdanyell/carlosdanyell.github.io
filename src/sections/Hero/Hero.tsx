@@ -7,6 +7,9 @@ import { scrollToSection } from '@/lib/scroll'
 import { SECTION_IDS } from '@/sections/ids'
 import { HeroBackground } from './HeroBackground'
 
+// Atraso das entradas do hero, no ritmo de --motion-scale (tokens.css).
+const delay = (s: number) => ({ animationDelay: `calc(${s}s * var(--motion-scale, 1))` })
+
 export function Hero() {
   const { t, lang } = useI18n()
   const resumeLang = __RESUMES__[lang] ? lang : __RESUMES__.pt ? 'pt' : __RESUMES__.en ? 'en' : null
@@ -26,7 +29,7 @@ export function Hero() {
               <WordReveal text="Danyell" as="span" className="block" delay={0.12} />
             </span>
           </h1>
-          <p className="hero-credential fade-up" style={{ animationDelay: '0.2s' }}>
+          <p className="hero-credential fade-up" style={delay(0.2)}>
             <span aria-hidden="true" className="status-dot" />
             {t.hero.role} <span className="text-muted">084091/O</span>
           </p>
@@ -43,10 +46,10 @@ export function Hero() {
               />
             ))}
           </p>
-          <p className="hero-description fade-up" style={{ animationDelay: '0.35s' }}>
+          <p className="hero-description fade-up" style={delay(0.35)}>
             {t.hero.tagline}
           </p>
-          <div className="hero-actions fade-up" style={{ animationDelay: '0.4s' }}>
+          <div className="hero-actions fade-up" style={delay(0.4)}>
             <ButtonLink
               href={'#' + SECTION_IDS.projects}
               onClick={(e) => {
@@ -72,7 +75,7 @@ export function Hero() {
             ) : null}
           </div>
         </div>
-        <div className="hero-bottom fade-up" style={{ animationDelay: '0.45s' }}>
+        <div className="hero-bottom fade-up" style={delay(0.45)}>
           <a
             href={'#' + SECTION_IDS.about}
             onClick={(e) => {

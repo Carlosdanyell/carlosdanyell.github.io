@@ -119,7 +119,7 @@
     border-radius: inherit;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 300ms var(--ease-out-soft);
+    transition: opacity 500ms var(--ease-out-soft);
     background: radial-gradient(420px circle at var(--px, 50%) var(--py, 50%), var(--spotlight), transparent 60%);
   }
   .card-spotlight:hover::before {
@@ -180,13 +180,13 @@ html.theme-transition *::after {
 
 /* Entradas do hero em CSS: rodam já no HTML pré-renderizado, antes do JavaScript. */
 .word-reveal {
-  animation: word-in 0.55s var(--ease-out-soft) both;
+  animation: word-in calc(0.55s * var(--motion-scale)) var(--ease-out-soft) both;
 }
 .fade-up {
-  animation: fade-up 0.5s var(--ease-out-soft) both;
+  animation: fade-up calc(0.5s * var(--motion-scale)) var(--ease-out-soft) both;
 }
 .fade-in {
-  animation: fade-in 0.4s var(--ease-out-soft) both;
+  animation: fade-in calc(0.4s * var(--motion-scale)) var(--ease-out-soft) both;
 }
 @keyframes word-in {
   from {

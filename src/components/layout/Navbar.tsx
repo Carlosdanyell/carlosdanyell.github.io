@@ -53,16 +53,17 @@ export function Navbar() {
   return (
     <header
       className={
-        'fixed inset-x-0 top-0 z-50 border-b bg-bg/95 transition-[border-color,background-color] duration-300 ' +
-        (scrolled || open ? 'border-border/80' : 'border-transparent')
+        'fixed inset-x-0 top-0 z-50 border-b transition-[border-color,box-shadow] duration-500 ' +
+        (scrolled || open ? 'border-border shadow-(--shadow-nav)' : 'border-transparent')
       }
     >
+      {/* No topo a barra é transparente e o fundo do hero continua por baixo dela; ao rolar
+          entra o vidro, o mesmo do site do DevCount: fundo levemente translúcido e desfoque. */}
       <div
         className={
-          'absolute inset-0 -z-10 transition-opacity duration-300 backdrop-blur-xl backdrop-saturate-150 ' +
+          'nav-glass absolute inset-0 -z-10 transition-opacity duration-500 ' +
           (scrolled || open ? 'opacity-100' : 'opacity-0')
         }
-        style={{ background: 'var(--nav-bg)' }}
         aria-hidden="true"
       />
       <nav aria-label={t.a11y.mainNav} className="container-page flex h-16 items-center justify-between gap-4">

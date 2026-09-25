@@ -214,8 +214,8 @@
     }
     .project-card {
       transition:
-        border-color 250ms,
-        box-shadow 250ms;
+        border-color 450ms,
+        box-shadow 450ms;
     }
   }
   @media (hover: hover) and (pointer: fine) {

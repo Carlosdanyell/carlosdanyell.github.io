@@ -19,7 +19,10 @@ export function WordReveal({ text, as: Tag = 'span', className, delay = 0, stagg
     <Tag className={className}>
       {words.map((word, i) => (
         <span key={`${word}-${i}`} className="inline-block overflow-hidden pb-[0.08em] align-bottom">
-          <span className="word-reveal inline-block" style={{ animationDelay: `${(delay + i * stagger).toFixed(3)}s` }}>
+          <span
+            className="word-reveal inline-block"
+            style={{ animationDelay: `calc(${(delay + i * stagger).toFixed(3)}s * var(--motion-scale, 1))` }}
+          >
             {word}
           </span>
           {i < words.length - 1 ? ' ' : null}

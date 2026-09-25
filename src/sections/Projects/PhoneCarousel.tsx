@@ -7,7 +7,7 @@ import type { Shot } from '@/data/projects'
 import { usePrefersReducedMotion } from '@/hooks/useMediaQuery'
 import { useI18n } from '@/i18n/context'
 
-const INTERVAL = 3200
+const INTERVAL = 5200
 const SIZES = '(min-width: 640px) 224px, 192px'
 
 /**
@@ -66,7 +66,7 @@ export function PhoneCarousel({ shots, alts }: { shots: Shot[]; alts: Record<str
             initial={reduced ? false : { opacity: 0, scale: 1.04, y: 10 * direction }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={reduced ? { opacity: 0 } : { opacity: 0, scale: 0.98, y: -8 * direction }}
-            transition={{ duration: reduced ? 0 : 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: reduced ? 0 : 0.85, ease: [0.22, 1, 0.36, 1] }}
           >
             <ResponsiveImage
               image={current.image}

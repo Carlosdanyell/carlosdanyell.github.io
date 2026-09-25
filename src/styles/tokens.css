@@ -23,7 +23,8 @@
   --card-glow: rgba(30, 100, 149, 0.14);
   --spotlight: rgba(30, 100, 149, 0.09);
   --grid-line-soft: rgba(15, 23, 42, 0.033);
-  --nav-bg: rgba(247, 248, 250, 0.7);
+  --nav-bg: rgba(247, 248, 250, 0.78);
+  --shadow-nav: 0 1px 2px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
   --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 24px 48px -28px rgba(15, 23, 42, 0.22);
   --device: #10151f;
   --device-edge: #2a3240;
@@ -34,6 +35,8 @@
   --device-shadow: rgba(0, 0, 0, 0.55);
   --device-highlight: rgba(255, 255, 255, 0.06);
   --radius-card: 1rem;
+  /* Ritmo das entradas: multiplica duração e atraso de tudo que entra na tela. */
+  --motion-scale: 1.7;
   --page-gutter: 1.25rem;
 }
 
@@ -55,7 +58,8 @@
   --card-glow: rgba(76, 141, 255, 0.14);
   --spotlight: rgba(76, 141, 255, 0.09);
   --grid-line-soft: rgba(139, 149, 167, 0.042);
-  --nav-bg: rgba(10, 15, 26, 0.62);
+  --nav-bg: rgba(10, 15, 26, 0.72);
+  --shadow-nav: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 24px 48px -24px rgba(0, 0, 0, 0.6);
   --device: #1b2231;
   --device-edge: #2c3647;

@@ -4,35 +4,35 @@
     "height": 1800,
     "src": "/images/devcount/01-inicio-960.webp",
     "srcset": "/images/devcount/01-inicio-480.webp 480w, /images/devcount/01-inicio-960.webp 960w, /images/devcount/01-inicio-1440.webp 1440w",
-    "placeholder": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACQAQCdASoQAAoAA4BaJZwAAtqIbcAA/vUUm6pHDf/t/0IH/J4yla6iaAVoAAAA"
+    "placeholder": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoQAAoAA4BaJZwAAp1BZXgAAP7zzmg/LOzCyKrDPBolvEWScQ9/3u2rxIPwyU8+AKwAAA=="
   },
   "devcount/02-servicos": {
     "width": 2880,
     "height": 1800,
     "src": "/images/devcount/02-servicos-960.webp",
     "srcset": "/images/devcount/02-servicos-480.webp 480w, /images/devcount/02-servicos-960.webp 960w, /images/devcount/02-servicos-1440.webp 1440w",
-    "placeholder": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoQAAoAA4BaJZwCdAEO/gOOAAD+8ha70VO0OD4OitZ1gAAA"
+    "placeholder": "data:image/webp;base64,UklGRioAAABXRUJQVlA4IB4AAAAwAQCdASoQAAoAA4BaJaQAA3AA/vR0+1c4xCVAAAA="
   },
   "devcount/03-como-funciona": {
     "width": 2880,
     "height": 1800,
     "src": "/images/devcount/03-como-funciona-960.webp",
     "srcset": "/images/devcount/03-como-funciona-480.webp 480w, /images/devcount/03-como-funciona-960.webp 960w, /images/devcount/03-como-funciona-1440.webp 1440w",
-    "placeholder": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoQAAoAA4BaJZQCdAD0cVIlAAD+8ha747j9JEW2iSYvFd9jqoaGPQAA"
+    "placeholder": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoQAAoAA4BaJQBOgCHfM4jwAP7pX9UpPI2tygiGB6TPllGvDZGcn6IwAAA="
   },
   "devcount/04-contato": {
     "width": 2880,
     "height": 1800,
     "src": "/images/devcount/04-contato-960.webp",
     "srcset": "/images/devcount/04-contato-480.webp 480w, /images/devcount/04-contato-960.webp 960w, /images/devcount/04-contato-1440.webp 1440w",
-    "placeholder": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQAAoAA4BaJZQCdAEO+mQ2AAD+8j5NfrPdOyAaxmL2Mf1AdQdnDbXeoVscAAAA"
+    "placeholder": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoQAAoAA4BaJZwAAudPl1MAAP72P2xuF4nP3bTjCfi9RBwA"
   },
   "devcount/05-mobile": {
     "width": 1170,
     "height": 2532,
     "src": "/images/devcount/05-mobile-960.webp",
     "srcset": "/images/devcount/05-mobile-480.webp 480w, /images/devcount/05-mobile-960.webp 960w, /images/devcount/05-mobile-1170.webp 1170w",
-    "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABwBACdASoQACMAPu1mqE8ppaOiKqwBMB2JZQC2yEXttmQdxEk0NeHwTo8PwAD+9zsMwkkHNvE29NMMet7w395mubiUOxBe8lfcDpxLlgGVmb+0aIPgGKg83WCfPg0Ljd2BCkHV4usvPgoGSm2AAAAA"
+    "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAACwBACdASoQACMAPu1aqU2ppKQiNVgIATAdiUAX5wit0Xww8tbPnM0xFQZkTegeAP7q5Ym0eLILmcp/uZH86koGLZO9LrSHSY7ayhLU0h0GLAD3qDpidsSbhqCWvNKxHgmiX2WYOuu1u8HguhQXAAAA"
   },
   "devfinance/01-inicio": {
     "width": 1236,
