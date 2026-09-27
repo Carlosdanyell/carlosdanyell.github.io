@@ -190,6 +190,28 @@ export const en: Dict = {
           '05-mobile': 'Mobile version of the top of the page',
         },
       },
+      auditanalyzer: {
+        name: 'AuditAnalyzer',
+        kind: 'Web application · Audit',
+        summary:
+          'A tool that analyzes the TOTVS Protheus CFGR700 audit log (journal entries, table CT2) and produces an Excel workpaper for internal audit and SOX. All processing happens in the browser.',
+        highlights: [
+          'Flags deleted, changed and posted entries and unbalanced documents, by period and by manual or automatic origin',
+          'Streams files of up to about 1 million rows in a Web Worker, keeping the interface responsive',
+          'Excel workpaper in Portuguese or English, with justifications and a row reconciliation',
+          'Verifiable integrity: SHA-256 of the files, ZIP CRC32 checks and invariants that block the export',
+          'No data leaves the machine: no server, no network calls and a strict Content-Security-Policy',
+          'Configurable rules, tests with synthetic files and end-to-end tests with Playwright in CI',
+        ],
+        shots: {
+          '01-painel': 'Dashboard with deleted, changed, unbalanced and posted documents and the table by origin',
+          '02-inicio': 'Start screen for loading the CFGR700 extractions, with the analysis steps',
+          '03-reconciliacao': 'Reconciliation with file integrity, the totals read and the checks',
+          '04-tabelas': 'Documents table with search, origin filter and one tab per category',
+          '05-justificativas': 'List of deleted documents with the status and justification of each one',
+          '06-exportacao': 'Export of the Excel workpaper, in Portuguese or English',
+        },
+      },
       conciliacao: {
         name: 'Account reconciliation tool',
         kind: 'Local web application',

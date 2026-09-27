@@ -189,6 +189,29 @@ export const pt = {
           '05-mobile': 'Versão para celular do topo da página',
         },
       },
+      auditanalyzer: {
+        name: 'AuditAnalyzer',
+        kind: 'Aplicação web · Auditoria',
+        summary:
+          'Ferramenta que analisa o log de auditoria CFGR700 do TOTVS Protheus (lançamentos contábeis da CT2) e gera um papel de trabalho em Excel para auditoria interna e SOX. Todo o processamento acontece no navegador.',
+        highlights: [
+          'Aponta exclusões, alterações, postagens e documentos desbalanceados, por período e por origem manual ou automática',
+          'Lê arquivos de até cerca de 1 milhão de linhas em fluxo, num Web Worker, sem travar a interface',
+          'Papel de trabalho em Excel, em português ou inglês, com justificativas e reconciliação de linhas',
+          'Integridade verificável: SHA-256 dos arquivos, CRC32 do ZIP e invariantes que bloqueiam a exportação',
+          'Nenhum dado sai da máquina: sem servidor, sem chamadas de rede e com Content-Security-Policy restrita',
+          'Regras configuráveis, testes com arquivos sintéticos e testes ponta a ponta com Playwright no CI',
+        ],
+        shots: {
+          '01-painel':
+            'Painel com excluídos, alterados, desbalanceados e postados, e a tabela de categorias por origem',
+          '02-inicio': 'Tela inicial para carregar as extrações do CFGR700, com o passo a passo da análise',
+          '03-reconciliacao': 'Reconciliação com a integridade dos arquivos, os totais lidos e as verificações',
+          '04-tabelas': 'Tabela de documentos com busca, filtro por origem e abas por categoria',
+          '05-justificativas': 'Lista de documentos excluídos com a situação e a justificativa de cada um',
+          '06-exportacao': 'Exportação do papel de trabalho em Excel, em português ou inglês',
+        },
+      },
       conciliacao: {
         name: 'Ferramenta de conciliação contábil',
         kind: 'Aplicação web local',

@@ -131,5 +131,47 @@
     "src": "/images/perfil/foto-960.webp",
     "srcset": "/images/perfil/foto-480.webp 480w, /images/perfil/foto-960.webp 960w, /images/perfil/foto-1254.webp 1254w",
     "placeholder": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAgCdASoQABAAA4BaJYwCdH8AE7EPT7LyAAD+8dK93C97SMcS4rmTBvnNRdGfYDh0tFGwWnS7BbzkiwAAAA=="
+  },
+  "auditanalyzer/01-painel": {
+    "width": 1440,
+    "height": 900,
+    "src": "/images/auditanalyzer/01-painel-960.webp",
+    "srcset": "/images/auditanalyzer/01-painel-480.webp 480w, /images/auditanalyzer/01-painel-960.webp 960w, /images/auditanalyzer/01-painel-1440.webp 1440w",
+    "placeholder": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAADQAQCdASoQAAoAA4BaJZQCw7EO/FbgAAD+imLb9N9z5JOy5FIYriAA"
+  },
+  "auditanalyzer/02-inicio": {
+    "width": 1440,
+    "height": 900,
+    "src": "/images/auditanalyzer/02-inicio-960.webp",
+    "srcset": "/images/auditanalyzer/02-inicio-480.webp 480w, /images/auditanalyzer/02-inicio-960.webp 960w, /images/auditanalyzer/02-inicio-1440.webp 1440w",
+    "placeholder": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoQAAoAA4BaJZQCdAD0gbJgAP6t7m/PfSqu6rWPvE24K5YAAAA="
+  },
+  "auditanalyzer/03-reconciliacao": {
+    "width": 1440,
+    "height": 900,
+    "src": "/images/auditanalyzer/03-reconciliacao-960.webp",
+    "srcset": "/images/auditanalyzer/03-reconciliacao-480.webp 480w, /images/auditanalyzer/03-reconciliacao-960.webp 960w, /images/auditanalyzer/03-reconciliacao-1440.webp 1440w",
+    "placeholder": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoQAAoAA4BaJZQCdAD0gbgwAAD+imLb9PcVCLfqLQm5jEOwAAA="
+  },
+  "auditanalyzer/04-tabelas": {
+    "width": 1440,
+    "height": 900,
+    "src": "/images/auditanalyzer/04-tabelas-960.webp",
+    "srcset": "/images/auditanalyzer/04-tabelas-480.webp 480w, /images/auditanalyzer/04-tabelas-960.webp 960w, /images/auditanalyzer/04-tabelas-1440.webp 1440w",
+    "placeholder": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoQAAoAA4BaJZQCdAD0jFlUgAD+imLb9PcVDBtn5om4K5YAAAA="
+  },
+  "auditanalyzer/05-justificativas": {
+    "width": 1440,
+    "height": 900,
+    "src": "/images/auditanalyzer/05-justificativas-960.webp",
+    "srcset": "/images/auditanalyzer/05-justificativas-480.webp 480w, /images/auditanalyzer/05-justificativas-960.webp 960w, /images/auditanalyzer/05-justificativas-1440.webp 1440w",
+    "placeholder": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoQAAoAA4BaJZQCw7D0gbJgAP6KYtv09xo26l+mPFCPywAA"
+  },
+  "auditanalyzer/06-exportacao": {
+    "width": 1440,
+    "height": 900,
+    "src": "/images/auditanalyzer/06-exportacao-960.webp",
+    "srcset": "/images/auditanalyzer/06-exportacao-480.webp 480w, /images/auditanalyzer/06-exportacao-960.webp 960w, /images/auditanalyzer/06-exportacao-1440.webp 1440w",
+    "placeholder": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoQAAoAA4BaJZQCdAD0h61QAP6t7kPGeqX7ZWZlv42xKQAA"
   }
 }
