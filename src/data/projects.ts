@@ -115,8 +115,19 @@ export const projects: Project[] = [
     ]),
   },
   {
-    id: 'conciliacao',
+    id: 'auditanalyzer',
     index: '04',
+    stack: ['TypeScript', 'React', 'Web Worker', 'Vitest', 'Playwright'],
+    links: [
+      { kind: 'live', href: 'https://carlosdanyell.github.io/AuditAnalyzer/' },
+      { kind: 'code', href: 'https://github.com/carlosdanyell/AuditAnalyzer' },
+    ],
+    visual: 'illustration',
+    shots: [],
+  },
+  {
+    id: 'conciliacao',
+    index: '05',
     stack: ['HTML', 'JavaScript'],
     status: 'in-development',
     links: [],

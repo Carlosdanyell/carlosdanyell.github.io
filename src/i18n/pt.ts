@@ -189,6 +189,23 @@ export const pt = {
           '05-mobile': 'Versão para celular do topo da página',
         },
       },
+      auditanalyzer: {
+        name: 'AuditAnalyzer',
+        kind: 'Aplicação web · Auditoria',
+        summary:
+          'Ferramenta que analisa o log de auditoria CFGR700 do TOTVS Protheus (lançamentos contábeis da CT2) e gera um papel de trabalho em Excel para auditoria interna e SOX. Todo o processamento acontece no navegador.',
+        highlights: [
+          'Aponta exclusões, alterações, postagens e documentos desbalanceados, por período e por origem manual ou automática',
+          'Lê arquivos de até cerca de 1 milhão de linhas em fluxo, num Web Worker, sem travar a interface',
+          'Papel de trabalho em Excel, em português ou inglês, com justificativas e reconciliação de linhas',
+          'Integridade verificável: SHA-256 dos arquivos, CRC32 do ZIP e invariantes que bloqueiam a exportação',
+          'Nenhum dado sai da máquina: sem servidor, sem chamadas de rede e com Content-Security-Policy restrita',
+          'Regras configuráveis, testes com arquivos sintéticos e testes ponta a ponta com Playwright no CI',
+        ],
+        illustrationAlt:
+          'Ilustração abstrata de um log de registros, com alguns sinalizados, virando uma planilha conferida',
+        shots: {},
+      },
       conciliacao: {
         name: 'Ferramenta de conciliação contábil',
         kind: 'Aplicação web local',
