@@ -202,9 +202,15 @@ export const pt = {
           'Nenhum dado sai da máquina: sem servidor, sem chamadas de rede e com Content-Security-Policy restrita',
           'Regras configuráveis, testes com arquivos sintéticos e testes ponta a ponta com Playwright no CI',
         ],
-        illustrationAlt:
-          'Ilustração abstrata de um log de registros, com alguns sinalizados, virando uma planilha conferida',
-        shots: {},
+        shots: {
+          '01-painel':
+            'Painel com excluídos, alterados, desbalanceados e postados, e a tabela de categorias por origem',
+          '02-inicio': 'Tela inicial para carregar as extrações do CFGR700, com o passo a passo da análise',
+          '03-reconciliacao': 'Reconciliação com a integridade dos arquivos, os totais lidos e as verificações',
+          '04-tabelas': 'Tabela de documentos com busca, filtro por origem e abas por categoria',
+          '05-justificativas': 'Lista de documentos excluídos com a situação e a justificativa de cada um',
+          '06-exportacao': 'Exportação do papel de trabalho em Excel, em português ou inglês',
+        },
       },
       conciliacao: {
         name: 'Ferramenta de conciliação contábil',

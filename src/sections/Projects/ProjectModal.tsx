@@ -10,7 +10,7 @@ import { usePrefersReducedMotion } from '@/hooks/useMediaQuery'
 import { useI18n } from '@/i18n/context'
 import { lockScroll } from '@/lib/scroll'
 import { ProjectLinkButton } from './ProjectLinkButton'
-import { ProjectIllustration } from './visuals'
+import { ReconciliationIllustration } from './visuals'
 
 interface Props {
   project: Project
@@ -97,7 +97,7 @@ export default function ProjectModal({ project, onClose }: Props) {
                         <Gallery shots={project.shots} alts={text.shots} />
                       ) : (
                         <div className="flex aspect-[16/10] items-center justify-center rounded-2xl border border-border bg-surface-2 p-6">
-                          <ProjectIllustration id={project.id} />
+                          <ReconciliationIllustration label={t.projects.items.conciliacao.illustrationAlt} />
                         </div>
                       )}
                     </div>

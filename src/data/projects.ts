@@ -122,8 +122,16 @@ export const projects: Project[] = [
       { kind: 'live', href: 'https://carlosdanyell.github.io/AuditAnalyzer/' },
       { kind: 'code', href: 'https://github.com/carlosdanyell/AuditAnalyzer' },
     ],
-    visual: 'illustration',
-    shots: [],
+    visual: 'browser',
+    fictionalData: true,
+    shots: shots('auditanalyzer', [
+      ['01-painel', 'browser'],
+      ['02-inicio', 'browser'],
+      ['03-reconciliacao', 'browser'],
+      ['04-tabelas', 'browser'],
+      ['05-justificativas', 'browser'],
+      ['06-exportacao', 'browser'],
+    ]),
   },
   {
     id: 'conciliacao',

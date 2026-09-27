@@ -7,7 +7,7 @@ import { useTilt } from '@/hooks/useTilt'
 import { useI18n } from '@/i18n/context'
 import { PhoneCarousel } from './PhoneCarousel'
 import { ProjectLinkButton } from './ProjectLinkButton'
-import { BrowserVisual, PhoneFan, ProjectIllustration } from './visuals'
+import { BrowserVisual, PhoneFan, ReconciliationIllustration } from './visuals'
 
 interface Props {
   project: Project
@@ -51,7 +51,7 @@ export function ProjectCard({ project, layout, onOpen }: Props) {
                   url={new URL(project.links[0].href).host + new URL(project.links[0].href).pathname}
                 />
               ) : (
-                <ProjectIllustration id={project.id} />
+                <ReconciliationIllustration label={t.projects.items.conciliacao.illustrationAlt} />
               )}
               <span className="preview-open" aria-hidden="true">
                 <ArrowUpRight size={19} />

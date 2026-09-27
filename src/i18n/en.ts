@@ -203,9 +203,14 @@ export const en: Dict = {
           'No data leaves the machine: no server, no network calls and a strict Content-Security-Policy',
           'Configurable rules, tests with synthetic files and end-to-end tests with Playwright in CI',
         ],
-        illustrationAlt:
-          'Abstract illustration of a log of records, some of them flagged, becoming a reviewed spreadsheet',
-        shots: {},
+        shots: {
+          '01-painel': 'Dashboard with deleted, changed, unbalanced and posted documents and the table by origin',
+          '02-inicio': 'Start screen for loading the CFGR700 extractions, with the analysis steps',
+          '03-reconciliacao': 'Reconciliation with file integrity, the totals read and the checks',
+          '04-tabelas': 'Documents table with search, origin filter and one tab per category',
+          '05-justificativas': 'List of deleted documents with the status and justification of each one',
+          '06-exportacao': 'Export of the Excel workpaper, in Portuguese or English',
+        },
       },
       conciliacao: {
         name: 'Account reconciliation tool',

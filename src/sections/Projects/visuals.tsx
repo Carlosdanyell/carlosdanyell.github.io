@@ -1,7 +1,6 @@
 import { BrowserFrame, PhoneFrame } from '@/components/ui/DeviceFrames'
 import { ResponsiveImage } from '@/components/ui/ResponsiveImage'
-import type { ProjectId, Shot } from '@/data/projects'
-import { useI18n } from '@/i18n/context'
+import type { Shot } from '@/data/projects'
 
 interface VisualProps {
   shots: Shot[]
@@ -90,7 +89,7 @@ export function BrowserVisual({ shots, alts, url }: VisualProps & { url: string 
  * pathLength) e opacidade por elemento corrompiam a renderização em GPUs de celulares
  * Android. A entrada do card já vem do Reveal que o envolve.
  */
-function ReconciliationIllustration({ label }: { label: string }) {
+export function ReconciliationIllustration({ label }: { label: string }) {
   const rows = [0, 1, 2, 3, 4, 5]
   const leftW = [72, 58, 80, 64, 50, 70]
   const rightW = [64, 76, 52, 70, 60, 74]
@@ -139,82 +138,4 @@ function ReconciliationIllustration({ label }: { label: string }) {
       <circle cx="270" cy={y(4) + 4} r="3.5" fill="none" stroke="var(--accent)" strokeWidth="1.5" />
     </svg>
   )
-}
-
-/**
- * Ilustração abstrata do AuditAnalyzer: um log de registros, com alguns sinalizados,
- * virando uma planilha conferida. Estática pelo mesmo motivo da ilustração da conciliação.
- */
-function AuditIllustration({ label }: { label: string }) {
-  const rows = [0, 1, 2, 3, 4, 5]
-  const logW = [84, 66, 92, 58, 78, 70]
-  // Linhas do log que o painel sinaliza (exclusão, alteração, desbalanceamento).
-  const flagged = new Set([1, 4])
-  const y = (i: number) => 44 + i * 28
-  const cols = [262, 302, 342]
-
-  return (
-    <svg viewBox="0 0 420 230" role="img" aria-label={label} className="h-full w-full max-w-[34rem]">
-      {/* Log de auditoria */}
-      <rect x="20" y="14" width="140" height="206" rx="12" fill="var(--surface-2)" stroke="var(--border)" />
-      <rect x="34" y="24" width="52" height="5" rx="2.5" fill="var(--muted)" fillOpacity="0.5" />
-      {rows.map((i) => (
-        <g key={i}>
-          <circle
-            cx="40"
-            cy={y(i) + 4}
-            r="3.5"
-            fill={flagged.has(i) ? 'none' : 'var(--border-strong)'}
-            stroke={flagged.has(i) ? 'var(--accent)' : 'none'}
-            strokeWidth="1.5"
-          />
-          <rect x="52" y={y(i)} width={logW[i]} height="8" rx="4" fill="var(--border-strong)" />
-        </g>
-      ))}
-      {/* Fluxo do log para a planilha */}
-      {[0, 1, 2].map((k) => (
-        <path
-          key={k}
-          d={`M160 ${80 + k * 36} C 205 ${80 + k * 36}, 205 ${100 + k * 16}, 248 ${100 + k * 16}`}
-          fill="none"
-          stroke="var(--primary)"
-          strokeOpacity="0.85"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-      ))}
-      {/* Papel de trabalho */}
-      <rect x="248" y="14" width="152" height="206" rx="12" fill="var(--surface-2)" stroke="var(--border)" />
-      <rect x="262" y="24" width="46" height="5" rx="2.5" fill="var(--muted)" fillOpacity="0.5" />
-      {cols.map((x) => (
-        <rect key={x} x={x} y="42" width="32" height="8" rx="3" fill="var(--primary)" fillOpacity="0.35" />
-      ))}
-      {rows.slice(0, 5).map((i) => (
-        <g key={i}>
-          {cols.map((x) => (
-            <rect key={x} x={x} y={y(i) + 26} width="32" height="8" rx="3" fill="var(--border-strong)" />
-          ))}
-          {i === 3 ? (
-            <circle cx="386" cy={y(i) + 30} r="3.5" fill="none" stroke="var(--accent)" strokeWidth="1.5" />
-          ) : (
-            <path
-              d={`M381 ${y(i) + 30} l3.5 3.5 l6 -7`}
-              fill="none"
-              stroke="var(--primary)"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          )}
-        </g>
-      ))}
-    </svg>
-  )
-}
-
-/** Ilustração do projeto que ainda não tem capturas. */
-export function ProjectIllustration({ id }: { id: ProjectId }) {
-  const { t } = useI18n()
-  if (id === 'auditanalyzer') return <AuditIllustration label={t.projects.items.auditanalyzer.illustrationAlt} />
-  return <ReconciliationIllustration label={t.projects.items.conciliacao.illustrationAlt} />
 }
