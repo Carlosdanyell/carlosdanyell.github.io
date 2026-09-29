@@ -35,13 +35,10 @@ export default function ProjectGrid() {
         <ProjectCard project={byId.devfinance} layout="featured" onOpen={handleOpen} />
       </Reveal>
       <Reveal className="lg:col-span-6" delay={0.05}>
-        <ProjectCard project={byId.iagames} layout="stacked" onOpen={handleOpen} />
+        <ProjectCard project={byId.auditanalyzer} layout="stacked" onOpen={handleOpen} />
       </Reveal>
       <Reveal className="lg:col-span-6" delay={0.1}>
         <ProjectCard project={byId.devcount} layout="stacked" onOpen={handleOpen} />
-      </Reveal>
-      <Reveal className="lg:col-span-12" delay={0.05}>
-        <ProjectCard project={byId.auditanalyzer} layout="wide" onOpen={handleOpen} />
       </Reveal>
       <Reveal className="lg:col-span-12" delay={0.05}>
         <ProjectCard project={byId.conciliacao} layout="wide" onOpen={handleOpen} />

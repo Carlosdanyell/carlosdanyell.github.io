@@ -112,6 +112,12 @@ src/
 
 Como `assets-origem/` fica fora do git, o PDF e as imagens processadas em `public/` precisam ser commitados.
 
+## Imagem de compartilhamento
+
+`public/og-image.png` (1200 × 630) é a prévia que aparece ao compartilhar o link no WhatsApp, LinkedIn e outras redes.
+Ela reproduz o hero do site. Ao trocar a imagem, aumente o número em `?v=` nas tags `og:image` e `twitter:image` do
+`index.html`: as redes guardam a prévia em cache pelo endereço, e o número novo as obriga a baixar a imagem de novo.
+
 ## Publicação
 
 Cada push na branch `main` executa o workflow `.github/workflows/deploy.yml`, que instala as dependências, gera o build
