@@ -151,28 +151,6 @@ export const en: Dict = {
           '06-resumo': 'Monthly summary with a chart of income, expenses and balance',
         },
       },
-      iagames: {
-        name: 'IA Games',
-        kind: 'Game library · PWA',
-        summary:
-          'A library of 11 HTML games that work offline, designed for phones. No framework and no build step: HTML, CSS and JavaScript with ES modules.',
-        highlights: [
-          'Eleven titles, including chess, pool, a crossword, a brick breaker and a space shooter',
-          'Works offline as a PWA, with a service worker and progress saved on the device',
-          'Direct multiplayer between devices on the same Wi-Fi network, with no server',
-          'Chess with complete rules and five engine levels (alpha-beta search)',
-          'Automated tests with the Node test runner and CI on GitHub Actions',
-        ],
-        shots: {
-          '01-biblioteca': 'Game library with a cover and description for each title',
-          '02-neon-chess': 'Neon Chess: chessboard against the engine',
-          '03-neon-slither': 'Neon Slither: start screen with skin selection',
-          '04-neon-shooter': 'Neon Shooter: space shooter start screen',
-          '05-neon-break': 'Neon Break: brick breaker ready to play',
-          '06-neon-arrow': 'Neon Arrow: archery in an urban setting',
-          '07-neon-pool': 'Neon Pool: 8-ball pool table in landscape',
-        },
-      },
       devcount: {
         name: 'devcount',
         kind: 'Landing page',

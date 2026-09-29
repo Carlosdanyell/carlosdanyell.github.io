@@ -150,28 +150,6 @@ export const pt = {
           '06-resumo': 'Resumo do mês com gráfico de receitas, despesas e balanço',
         },
       },
-      iagames: {
-        name: 'IA Games',
-        kind: 'Biblioteca de jogos · PWA',
-        summary:
-          'Biblioteca com 11 jogos em HTML que funcionam offline, feitos para celular. Sem framework e sem build: HTML, CSS e JavaScript com módulos ES.',
-        highlights: [
-          'Onze títulos, entre eles xadrez, sinuca, cruzadinha, quebra-blocos e tiro espacial',
-          'Funciona sem internet como PWA, com service worker e progresso salvo no aparelho',
-          'Multiplayer direto entre aparelhos na mesma rede Wi-Fi, sem servidor',
-          'Xadrez com regras completas e cinco níveis de máquina (busca alfa-beta)',
-          'Testes automatizados com o test runner do Node e CI no GitHub Actions',
-        ],
-        shots: {
-          '01-biblioteca': 'Biblioteca de jogos com capas e descrição de cada título',
-          '02-neon-chess': 'Neon Chess: tabuleiro de xadrez contra a máquina',
-          '03-neon-slither': 'Neon Slither: tela inicial com escolha de skin',
-          '04-neon-shooter': 'Neon Shooter: tela inicial do tiro espacial',
-          '05-neon-break': 'Neon Break: quebra-blocos pronto para jogar',
-          '06-neon-arrow': 'Neon Arrow: tiro com arco em cenário urbano',
-          '07-neon-pool': 'Neon Pool: mesa de sinuca 8-ball na horizontal',
-        },
-      },
       devcount: {
         name: 'devcount',
         kind: 'Landing page',

@@ -76,55 +76,6 @@
     "srcset": "/images/devfinance/06-resumo-480.webp 480w, /images/devfinance/06-resumo-960.webp 960w, /images/devfinance/06-resumo-1236.webp 1236w",
     "placeholder": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAgCdASoQACMAPu1srlCppaQiqqgBMB2JaQAAUfYAAP7wTWXzQKU4nN3O9uWBc0ttgAAA"
   },
-  "ia-games/01-biblioteca": {
-    "width": 824,
-    "height": 1784,
-    "src": "/images/ia-games/01-biblioteca-824.webp",
-    "srcset": "/images/ia-games/01-biblioteca-480.webp 480w, /images/ia-games/01-biblioteca-824.webp 824w",
-    "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACQBACdASoQACMAPulep02pJSOiNVgIASAdCWUAvdAUOulIHLIoGVk1Ps0ldgAA/uwROf9QW7JqKDNH5cRpihh+opvPUs5qxAp9Gqg1UAneXk0CKS2MyDAA"
-  },
-  "ia-games/02-neon-chess": {
-    "width": 824,
-    "height": 1784,
-    "src": "/images/ia-games/02-neon-chess-824.webp",
-    "srcset": "/images/ia-games/02-neon-chess-480.webp 480w, /images/ia-games/02-neon-chess-824.webp 824w",
-    "placeholder": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwBACdASoQACMAPt1YpE2opSOiNUgBEBuJZQDE2Czc725RcXnfW4iPtsAA/vFn7YRPamU/drdgrUfSQQpIvPzv8CfIgmQovpYAu9qWlyTkXiYEeAAAAA=="
-  },
-  "ia-games/03-neon-slither": {
-    "width": 824,
-    "height": 1784,
-    "src": "/images/ia-games/03-neon-slither-824.webp",
-    "srcset": "/images/ia-games/03-neon-slither-480.webp 480w, /images/ia-games/03-neon-slither-824.webp 824w",
-    "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQBACdASoQACMAPt1apE2opSOiNUgBEBuJZQDCgCzZ29f51mAQan9s0AD+8NYQcaPP3PUCn8/agdjB4yYKIeoCEm+n7FHBUPAFle5GQ9rNRzXxPpw8MokB2u2ieqIAAAA="
-  },
-  "ia-games/04-neon-shooter": {
-    "width": 824,
-    "height": 1784,
-    "src": "/images/ia-games/04-neon-shooter-824.webp",
-    "srcset": "/images/ia-games/04-neon-shooter-480.webp 480w, /images/ia-games/04-neon-shooter-824.webp 824w",
-    "placeholder": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACwBACdASoQACMAPt1apU2opSOiNUgBEBuJZQDE2CzdJTaRk99lrBTh6hB6tUYoAP7xYav+kYmD2mC4CcrkaJfGVjY5OJAD/85Ow5Twb4LfAki6AAA="
-  },
-  "ia-games/05-neon-break": {
-    "width": 824,
-    "height": 1784,
-    "src": "/images/ia-games/05-neon-break-824.webp",
-    "srcset": "/images/ia-games/05-neon-break-480.webp 480w, /images/ia-games/05-neon-break-824.webp 824w",
-    "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwBACdASoQACMAPt1apU2opSOiNUgBEBuJZQDImCzakSYasJJ6Nff2AwbLoAD+8WCZte2DAfavGCmvFWPhbOnbHyX6/IGUNdudlnBbzn0qzibqROe2Iab8f5sAAA=="
-  },
-  "ia-games/06-neon-arrow": {
-    "width": 1784,
-    "height": 824,
-    "src": "/images/ia-games/06-neon-arrow-960.webp",
-    "srcset": "/images/ia-games/06-neon-arrow-480.webp 480w, /images/ia-games/06-neon-arrow-960.webp 960w, /images/ia-games/06-neon-arrow-1440.webp 1440w",
-    "placeholder": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAABwAQCdASoQAAcAA4BaJYwCdAF1AAD+8PzsCIHNmX6E4kRr1pG3CybsOKWgAA=="
-  },
-  "ia-games/07-neon-pool": {
-    "width": 1784,
-    "height": 824,
-    "src": "/images/ia-games/07-neon-pool-960.webp",
-    "srcset": "/images/ia-games/07-neon-pool-480.webp 480w, /images/ia-games/07-neon-pool-960.webp 960w, /images/ia-games/07-neon-pool-1440.webp 1440w",
-    "placeholder": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAABQAQCdASoQAAcAA4BaJZQABDOAAP7yveJmEx1HkbatrpY6I/q2wAAA"
-  },
   "perfil/foto": {
     "width": 1254,
     "height": 1254,
