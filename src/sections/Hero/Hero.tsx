@@ -31,7 +31,7 @@ export function Hero() {
           </h1>
           <p className="hero-credential fade-up" style={delay(0.2)}>
             <span aria-hidden="true" className="status-dot" />
-            {t.hero.role} <span className="text-muted">084091/O</span>
+            {t.hero.role} <span className="text-muted">084091/O-8</span>
           </p>
         </div>
         <div className="hero-proposition">

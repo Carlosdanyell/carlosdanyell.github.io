@@ -1,6 +1,6 @@
 # Portfólio · Carlos Danyell da Silva
 
-Portfólio profissional de Carlos Danyell da Silva, contador (CRC-PR 084091/O) com foco em auditoria e controles
+Portfólio profissional de Carlos Danyell da Silva, contador (CRC-PR 084091/O-8) com foco em auditoria e controles
 internos e base em desenvolvimento web e mobile. Publicado em **[carlosdanyell.github.io](https://carlosdanyell.github.io)**.
 
 O site apresenta trajetória, projetos, competências, formação e contato, em português (padrão) e inglês, com tema claro

@@ -40,7 +40,7 @@ export const en: Dict = {
     record: {
       title: 'Record',
       rows: [
-        ['License', 'CRC-PR 084091/O'],
+        ['License', 'CRC-PR 084091/O-8'],
         ['Role', 'Accounting assistant'],
         ['Goal', 'Audit and internal controls'],
         ['Studying', 'Postgraduate in Auditing and Forensic Accounting'],
@@ -252,7 +252,7 @@ export const en: Dict = {
       },
     },
     certs: {
-      crc: { name: 'Professional license', org: 'CRC-PR', detail: '084091/O' },
+      crc: { name: 'Professional license', org: 'CRC-PR', detail: '084091/O-8' },
       anbima: { name: 'Risk and Performance Management', org: 'ANBIMA', detail: '' },
       enap: { name: 'Accounting – Public Asset Management', org: 'ENAP', detail: '21 h' },
       alura: { name: 'Front-End Development Track', org: 'Alura', detail: '85 h' },
