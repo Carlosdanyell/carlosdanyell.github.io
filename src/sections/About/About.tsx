@@ -52,7 +52,7 @@ export function About() {
                   <br />
                   da Silva
                 </p>
-                <span className="font-mono text-xs text-muted">CRC-PR 084091/O</span>
+                <span className="font-mono text-xs text-muted">CRC-PR 084091/O-8</span>
               </div>
             </div>
             <dl className="profile-record">

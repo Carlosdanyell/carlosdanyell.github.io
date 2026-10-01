@@ -40,7 +40,7 @@ export const pt = {
     record: {
       title: 'Ficha',
       rows: [
-        ['Registro', 'CRC-PR 084091/O'],
+        ['Registro', 'CRC-PR 084091/O-8'],
         ['Atuação', 'Assistente de contabilidade'],
         ['Objetivo', 'Auditoria e controles internos'],
         ['Estudo', 'Pós em Auditoria e Perícia Contábil'],
@@ -252,7 +252,7 @@ export const pt = {
       },
     },
     certs: {
-      crc: { name: 'Registro profissional', org: 'CRC-PR', detail: '084091/O' },
+      crc: { name: 'Registro profissional', org: 'CRC-PR', detail: '084091/O-8' },
       anbima: { name: 'Gestão de Riscos e Performance', org: 'ANBIMA', detail: '' },
       enap: { name: 'Contabilidade – Gestão do Patrimônio Público', org: 'ENAP', detail: '21 h' },
       alura: { name: 'Formação Front-End', org: 'Alura', detail: '85 h' },
