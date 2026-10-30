@@ -170,24 +170,26 @@ export const en: Dict = {
       },
       auditanalyzer: {
         name: 'AuditAnalyzer',
-        kind: 'Web application · Audit',
+        kind: 'Web platform · Audit',
         summary:
-          'A tool that analyzes the TOTVS Protheus CFGR700 audit log (journal entries, table CT2) and produces an Excel workpaper for internal audit and SOX. All processing happens in the browser.',
+          'A platform of accounting audit tools for TOTVS Protheus that runs entirely in the browser. It brings together the CFGR700 audit log analysis and the integrity of the CT2 journal extraction, and produces Excel workpapers for internal audit and SOX.',
         highlights: [
-          'Flags deleted, changed and posted entries and unbalanced documents, by period and by manual or automatic origin',
+          'Audit log (CFGR700): deleted, changed and posted entries and unbalanced documents, by period and by manual or automatic origin',
+          'CT2 integrity: debits and credits per document, batch and day within each balance type and currency, with balancing, consistency and structure tests',
+          'Workpaper tied out by formulas: changing the tolerance or the period in the spreadsheet recalculates the tests and their status',
           'Streams files of up to about 1 million rows in a Web Worker, keeping the interface responsive',
-          'Excel workpaper in Portuguese or English, with justifications and a row reconciliation',
-          'Verifiable integrity: SHA-256 of the files, ZIP CRC32 checks and invariants that block the export',
-          'No data leaves the machine: no server, no network calls and a strict Content-Security-Policy',
-          'Configurable rules, tests with synthetic files and end-to-end tests with Playwright in CI',
+          'No data leaves the machine: no server and no network calls, with SHA-256 of the files and checks that block the export',
+          'A console interface ready for new tools, such as reconciliations, with synthetic and end-to-end tests in CI',
         ],
         shots: {
-          '01-painel': 'Dashboard with deleted, changed, unbalanced and posted documents and the table by origin',
-          '02-inicio': 'Start screen for loading the CFGR700 extractions, with the analysis steps',
-          '03-reconciliacao': 'Reconciliation with file integrity, the totals read and the checks',
-          '04-tabelas': 'Documents table with search, origin filter and one tab per category',
-          '05-justificativas': 'List of deleted documents with the status and justification of each one',
-          '06-exportacao': 'Export of the Excel workpaper, in Portuguese or English',
+          '01-painel-ct2':
+            'CT2 integrity dashboard with the key figures, totals by balance type and currency and the board of tests',
+          '02-ferramentas': 'Start screen with the platform tools, what each one reads and its status',
+          '03-reconciliacao': 'Reconciliation with the integrity verdict, the checks and the board of tests',
+          '04-tabelas': 'CT2 documents table in the dark theme, with segment, search and the test columns',
+          '05-painel-cfgr700':
+            'Audit log dashboard with the period, the cut-off date and the categories by manual or automatic origin',
+          '06-exportacao': 'Export of the workpaper tied out by formulas, in Portuguese or English',
         },
       },
       conciliacao: {
@@ -198,6 +200,7 @@ export const en: Dict = {
         highlights: [
           'Matches general ledger entries against ERP reports',
           'Runs in the browser on your own machine: no data is sent anywhere',
+          'May join the AuditAnalyzer platform as one of its tools',
         ],
         illustrationAlt: 'Abstract illustration of two columns of records being matched and reconciled',
         shots: {},

@@ -169,25 +169,26 @@ export const pt = {
       },
       auditanalyzer: {
         name: 'AuditAnalyzer',
-        kind: 'Aplicação web · Auditoria',
+        kind: 'Plataforma web · Auditoria',
         summary:
-          'Ferramenta que analisa o log de auditoria CFGR700 do TOTVS Protheus (lançamentos contábeis da CT2) e gera um papel de trabalho em Excel para auditoria interna e SOX. Todo o processamento acontece no navegador.',
+          'Plataforma de ferramentas de auditoria contábil para o TOTVS Protheus que roda inteira no navegador. Reúne a análise do log de auditoria CFGR700 e a integridade da extração da CT2, e gera papéis de trabalho em Excel para auditoria interna e SOX.',
         highlights: [
-          'Aponta exclusões, alterações, postagens e documentos desbalanceados, por período e por origem manual ou automática',
+          'Log de auditoria (CFGR700): exclusões, alterações, postagens e documentos desbalanceados, por período e por origem manual ou automática',
+          'Integridade da CT2: débito e crédito por documento, lote e dia em cada tipo de saldo e moeda, com testes de balanceamento, consistência e estrutura',
+          'Papel de trabalho amarrado por fórmulas: mudar a tolerância ou o período na planilha recalcula os testes e os status',
           'Lê arquivos de até cerca de 1 milhão de linhas em fluxo, num Web Worker, sem travar a interface',
-          'Papel de trabalho em Excel, em português ou inglês, com justificativas e reconciliação de linhas',
-          'Integridade verificável: SHA-256 dos arquivos, CRC32 do ZIP e invariantes que bloqueiam a exportação',
-          'Nenhum dado sai da máquina: sem servidor, sem chamadas de rede e com Content-Security-Policy restrita',
-          'Regras configuráveis, testes com arquivos sintéticos e testes ponta a ponta com Playwright no CI',
+          'Nenhum dado sai da máquina: sem servidor nem chamadas de rede, com SHA-256 dos arquivos e verificações que bloqueiam a exportação',
+          'Interface de console pronta para receber novas ferramentas, como conciliações, com testes sintéticos e ponta a ponta no CI',
         ],
         shots: {
-          '01-painel':
-            'Painel com excluídos, alterados, desbalanceados e postados, e a tabela de categorias por origem',
-          '02-inicio': 'Tela inicial para carregar as extrações do CFGR700, com o passo a passo da análise',
-          '03-reconciliacao': 'Reconciliação com a integridade dos arquivos, os totais lidos e as verificações',
-          '04-tabelas': 'Tabela de documentos com busca, filtro por origem e abas por categoria',
-          '05-justificativas': 'Lista de documentos excluídos com a situação e a justificativa de cada um',
-          '06-exportacao': 'Exportação do papel de trabalho em Excel, em português ou inglês',
+          '01-painel-ct2':
+            'Painel da integridade da CT2 com os indicadores-chave, os totais por tipo de saldo e moeda e o quadro de testes',
+          '02-ferramentas': 'Tela inicial com as ferramentas da plataforma, o que cada uma lê e a situação',
+          '03-reconciliacao': 'Reconciliação com o veredito de integridade, as verificações e o quadro de testes',
+          '04-tabelas': 'Tabela de documentos da CT2 no tema escuro, com segmento, busca e as colunas de teste',
+          '05-painel-cfgr700':
+            'Painel do log de auditoria com período, data de corte e as categorias por origem manual ou automática',
+          '06-exportacao': 'Exportação do papel de trabalho amarrado por fórmulas, em português ou inglês',
         },
       },
       conciliacao: {
@@ -198,6 +199,7 @@ export const pt = {
         highlights: [
           'Cruza os lançamentos do razão com os relatórios do ERP',
           'Roda no navegador, na própria máquina: nenhum dado é enviado para fora',
+          'Pode entrar como uma das ferramentas da plataforma AuditAnalyzer',
         ],
         illustrationAlt: 'Ilustração abstrata de duas colunas de registros sendo cruzadas e conciliadas',
         shots: {},
